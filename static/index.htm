@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+
+    <title>Course Matrix</title>
+
+    
+<link rel="stylesheet" href="css/pure-min.css">
+
+
+
+
+  
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/layouts/side-menu.css">
+    <!--<![endif]-->
+<link rel="stylesheet" href="css/towmatrix.css">
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/towmatrix.js"></script>
+</head>
+<body>
+
+<div style="display:none">
+    <img src="/slides/ds0.jpg">
+    <img src="/slides/fa0.jpg">
+    <img src="/slides/ia0.jpg">
+    <img src="/slides/bs0.jpg">
+    <img src="/slides/va0.jpg">
+    <img src="/slides/ds1.jpg">
+    <img src="/slides/fa1.jpg">
+    <img src="/slides/ia1.jpg">
+    <img src="/slides/bs1.jpg">
+    <img src="/slides/va1.jpg">
+</div>
+
+<div id="layout">
+    <div id="main">
+        <div class="content">
+
+        
+        <h2 class="content-subheadline"><span class="content-subhead">Select your School</span></h2>
+
+        <div class="pure-g-r matrix">
+                <div class="pure-u-1-5">
+                    
+                        <div id="matrixBigDS">
+                        <a href="#" id="matrixBigFaLink" class="matrixBig">
+                            <div id="matrixText">
+                                <span class="matrixBigMid">DESIGN</span><br>
+                                <span class="matrixBigBot">STUDIES</span>
+                            </div>                            
+                            </a>              
+                        </div>      
+                    
+                </div>
+                <div class="pure-u-1-5">
+                    
+                        <div id="matrixBigFA"><a href="#" id="matrixBigFaLink" class="matrixBig">
+                            <div id="matrixText">
+                                <span class="matrixBigMid">FILM</span><br>
+                                <span class="matrixBigBot">ARTS</span>
+                            </div>                            
+                        </a></div>      
+                    
+                </div>
+                <div class="pure-u-1-5">
+                    
+                        <div id="matrixBigIA"><a href="#" id="matrixBigFaLink" class="matrixBig">
+                            <div id="matrixText">
+                                <span class="matrixBigMid">INTERACTIVE</span><br>
+                                <span class="matrixBigBot">ARTS</span>
+                            </div>                            
+                         </a></div>      
+                   
+                </div>
+
+                <div class="pure-u-1-5">
+                    
+                        <div id="matrixBigCS"><a href="#" id="matrixBigFaLink" class="matrixBig">
+                            <div id="matrixText">
+                                <span class="matrixBigMid">CULTURE</span><br>
+                                <span class="matrixBigBot">STUDIES</span>
+                            </div>                            
+                        </a></div>      
+                    
+                </div>
+
+                <div class="pure-u-1-5">
+                   
+                        <div id="matrixBigVA"> <a href="#" id="matrixBigFaLink" class="matrixBig">
+                            <div id="matrixText">
+                                <span class="matrixBigMid">VISUAL</span><br>
+                                <span class="matrixBigBot">ARTS</span>
+                            </div>                            
+                           </a></div>      
+                 
+                </div>
+
+            </div>
+
+
+
+
+
+
+<div class="pure-g-r schoolbigblocks">
+    <div class="pure-u-1-5">
+        <div class="schoolblocksleft schoolblocks" id="schoolblock1">
+            <div id="schoolblock1text" style="position:absolute;">
+                <p>The pursuit of a career in Design Studies provides the kind of thinking associated with the next generation as we investigate the fields of Communication Design, Photography and Illustration.</p>
+            </div>
+            <div id="schoolblock1demo0" class="schoolblock1demo"></div>
+            <div id="schoolblock1demo1" class="schoolblock1demo" style="display:none"></div>
+        </div>
+    </div>
+
+    <div class="pure-u-1-5">
+        <div class="schoolblocksmid schoolblocks" id="schoolblock2">
+            <div id="schoolblock2text" style="position:absolute;">
+                <p>The pursuit of a career in Design Studies provides the kind of thinking associated with the next generation as we investigate the fields of Communication Design, Photography and Illustration.</p>
+            </div>
+            <div id="schoolblock2demo0" class="schoolblock2demo"></div>
+            <div id="schoolblock2demo1" class="schoolblock2demo" style="display:none"></div>
+        </div>
+    </div>
+
+    <div class="pure-u-1-5">
+        <div class="schoolblocksmid schoolblocks" id="schoolblock3">
+            <div id="schoolblock3text" style="position:absolute;">
+                <p>The pursuit of a career in Design Studies provides the kind of thinking associated with the next generation as we investigate the fields of Communication Design, Photography and Illustration.</p>
+            </div>
+            <div id="schoolblock3demo0" class="schoolblock3demo"></div>
+            <div id="schoolblock3demo1" class="schoolblock3demo" style="display:none"></div>
+        </div>
+    </div>
+
+    <div class="pure-u-1-5">
+        <div class="schoolblocksmid schoolblocks" id="schoolblock4">
+            <div id="schoolblock4text" style="position:absolute;">
+                <p>The pursuit of a career in Design Studies provides the kind of thinking associated with the next generation as we investigate the fields of Communication Design, Photography and Illustration.</p>
+            </div>
+            <div id="schoolblock4demo0" class="schoolblock4demo"></div>
+            <div id="schoolblock4demo1" class="schoolblock4demo" style="display:none"></div>
+        </div>
+    </div>
+
+    <div class="pure-u-1-5">
+        <div class="schoolblocksright schoolblocks" id="schoolblock5">
+            <div id="schoolblock5text" style="position:absolute;">
+                <p>The pursuit of a career in Design Studies provides the kind of thinking associated with the next generation as we investigate the fields of Communication Design, Photography and Illustration.</p>
+            </div>
+            <div id="schoolblock5demo0" class="schoolblock5demo"></div>
+            <div id="schoolblock5demo1" class="schoolblock5demo" style="display:none"></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<h2 class="content-subheadline fieldheading"><span class="content-subhead">Select your Field</span></h2>
+
+<div class="pure-g-r fieldsmenu">
+    <div class="pure-u-1-5" >
+        <div class="fields left" id="field0">
+           
+                <div class="fieldsText">
+                    <span  class="fieldText" id="field0text">Communication Design</span>
+                </div>  
+
+        </div>
+    </div>
+
+    <div class="pure-u-1-5" >
+        <div class="fields mid" id="field1">
+            <div>
+                <span class="fieldText" id="field1text">Photography</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="pure-u-1-5" >
+        <div class="fields mid" id="field2">
+            <div>
+                <span class="fieldText" id="field2text">Photography</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="pure-u-1-5">
+        <div class="fields mid" id="field3">
+            <div>
+                <span class="fieldText" id="field3text">Photography</span>
+            </div>
+        </div>
+    </div>    
+
+    <div class="pure-u-1-5">
+        <div class="fields right" id="field4">
+            <div>
+                <span class="fieldText" id="field4text">Illustration</span>
+            </div>
+        </div>
+    </div>    
+</div>
+
+<h2 class="content-subheadline outcomesheading"><span class="content-subhead">Select your Outcome</span></h2>        
+
+
+<div class="pure-g-r outcomesmenu" >    
+
+    <div class="pure-u-1-5">
+        <div id="outcomes0" class="outcomesWrap left">
+        <div class="outcomesText">
+        <span class="outcomesBIG" style="margin-top:20px;">CARREERS</span><br></div></div>    
+    </div>
+
+    <div class="pure-u-1-5">
+        <div id="outcomes1" class="outcomesWrap mid">
+        <div class="outcomesText">
+        <span class="outcomesBIG">SHORT</span><br>
+        <span class="outcomesSMALL">Courses</span></div></div>                    
+    </div>
+
+    <div class="pure-u-1-5">
+        <div id="outcomes2" class="outcomesWrap mid">
+        <div class="outcomesText">
+        <span class="outcomesBIG">SHORT</span><br>
+        <span class="outcomesSMALL">Learning Programmes</span></div></div>                    
+    </div>                
+
+    <div class="pure-u-1-5">
+        <div id="outcomes3" class="outcomesWrap mid">
+        <div class="outcomesText">
+        <span class="outcomesBIG">PROFESSIONAL</span><br>
+        <span class="outcomesSMALL">Skills Courses</span></div></div>                    
+    </div>   
+
+    <div class="pure-u-1-5">
+        <div id="outcomes4" class="outcomesWrap right">                                          
+        <div class="outcomesText">
+        <span class="outcomesBIG">ONE YEAR</span><br>
+        <span class="outcomesSMALL">Programmes</span></div></div>
+    </div>   
+</div>                
+
+
+
+
+<div class="pure-g-r outcomesmenu2" style="margin-top: 8px;">    
+
+    <div class="pure-u-1-5">
+        <div id="outcomes5" class="outcomesWrap left">
+        <div class="outcomesText">
+        <span class="outcomesBIG">BA HONOURS</span><br>
+        <span class="outcomesSMALL">Visual Communication</span></div></div>                    
+    </div>
+
+    <div class="pure-u-1-5">
+        <div id="outcomes6" class="outcomesWrap mid">
+        <div class="outcomesText">
+        <span class="outcomesBIG">BA DEGREE</span><br>
+        <span class="outcomesSMALL">Visual Communication</span></div></div>                    
+    </div>
+
+    <div class="pure-u-1-5">
+        <div id="outcomes7" class="degreeWrap mid">
+        <div class="degreeText">
+        <span class="degreeBIG">1</span>
+        <span class="degreeMED">FOUNDATION</span>
+        <span class="degreeSMALL">YEAR</span></div></div>                    
+    </div>                
+
+    <div class="pure-u-1-5">
+        <div id="outcomes8" class="degreeWrap mid ">
+        <div class="degreeText">
+        <span class="degreeBIG">2</span>
+        <span class="degreeMED">SECOND</span>
+        <span class="degreeSMALL">YEAR</span></div></div>                    
+    </div>  
+
+    <div class="pure-u-1-5">
+        <div id="outcomes9" class="degreeWrap right ">
+        <div class="degreeText">
+        <span class="degreeBIG">3</span>
+        <span class="degreeMED">THIRD</span>
+        <span class="degreeSMALL">YEAR</span></div></div>                    
+    </div>  
+
+</div>       
+
+
+<h2 class="content-subheadline courseheading"><span class="content-subhead">Course Structure</span></h2> 
+
+<div class="pure-g-r coursemenu" style="margin-top: 8px;">    
+                <div class="pure-u-1-5">
+                    <div class="structureWrap left">                           
+                                <div class="structureText">
+                                    <span class="structureBIG">DESIGN</span>
+                                    <span class="structureSMALL">STUDIES</span>
+                                </div>  
+                    </div>                    
+                </div>
+
+                <div class="pure-u-4-5">
+                    <div class="structureContent">                         
+                        <h3 id="structureFieldTitle"><span id="structureFieldTitleArrow">&gt;</span> <span id="structureFieldText">Photography</span></h3>
+
+                        <p id="structureTextBlockTop">
+                        </p>
+
+                        <div id="subject">Photography 101</div>
+                        <p id="subjectTextBlock">This introduces the student to the terminologies and functionality of the 35mm digital single-lens reflex camera from basic to advanced camera settings, and will focus on ascpects such as exposure control, the practical control of contrast and tone, as well as the fundamental principles of light and colour.                            
+                        </p>
+
+                    </div>                    
+                </div>
+            
+</div>
+
+
+
+
+<div class="pure-g-r" id="courselayoutmenu" >   
+     <div class="pure-u-1-3" style="margin-top: 45px;">
+        <div id="courselayoutleftwrap">
+            <div id="courselayoutleftcontent">
+                <span id="courselayoutleftcontentyear">1</span>
+                <span id="courselayoutleftcontenttitle">Foundation Year</span>
+
+                <div id="courselayoutleftcredits">120 Credits</div>
+
+                <div id="courselayoutleftcreditsbar">
+                    <div id="bar0"></div>
+                    <div id="bar1"></div>
+                    <div id="bar2"></div>
+                </div>
+
+            </div>
+        </div>
+     </div>
+
+     <div class="pure-u-1-3">
+         <div id="coresubjectswrapper">
+            <h3 id="layoutsubjectsheading">Core Subjects</h3>
+
+            <div class="pure-g-r">
+                <div class="pure-u-1-2">
+                    <div class="courselayoutsubjectwrap left" >
+                        <h3 class="courselayoutsubjecttitle">Visual Culture</h3>
+                        <h4 class="courselayoutsubjectcredits">20 credits</h4>
+                    </div>
+                </div>
+                <div class="pure-u-1-2">
+                    <div class="courselayoutsubjectwrap right" >
+                        <h3 class="courselayoutsubjecttitle">Drawing</h3>
+                        <h4 class="courselayoutsubjectcredits">20 credits</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pure-g-r" style="margin-top: 8px;">
+                <div class="pure-u-1-2">
+                    <div class="courselayoutsubjectwrap left" >
+                        <h3 class="courselayoutsubjecttitle">Academic Skills</h3>
+                        <h4 class="courselayoutsubjectcredits">10 credits</h4>
+                    </div>
+                </div>
+                <div class="pure-u-1-2">
+                    <div class="courselayoutsubjectwrap right" >
+                        <h3 class="courselayoutsubjecttitle">Art History</h3>
+                        <h4 class="courselayoutsubjectcredits">10 credits</h4>
+                    </div>
+                </div>
+            </div>
+
+
+         </div>
+     </div>
+
+     <div class="pure-u-1-3">
+     <div id="majorsubjectswrapper">
+            <h3 id="layoutsubjectsheading">Major Subjects</h3>
+            <div class="pure-g-r">
+                <div class="pure-u-1-2">
+                    <div class="courselayoutsubjectwrap left"  style="background: #fbb427">
+                        <h3 class="courselayoutsubjecttitle" >Photography</h3>
+                        <h4 class="courselayoutsubjectcredits">20 credits</h4>
+                    </div>
+                </div>
+                <div class="pure-u-1-2">
+                    <div class="courselayoutsubjectwrap right courselayoutaddsubject" style="">
+                        <span class="courselayoutaddsubjectspan">+ Add subject</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pure-g-r" style="margin-top: 8px;">
+                <div class="pure-u-1-2">
+                    <div class="courselayoutsubjectwrap left courselayoutaddsubject" style="">
+                        <span class="courselayoutaddsubjectspan">+ Add subject</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+         </div>
+     </div>     
+</div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script src="js/ui.js"></script>
+    
+</body>
+</html>
