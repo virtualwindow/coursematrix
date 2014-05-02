@@ -17,6 +17,9 @@
   src: local('Open Sans Bold'), local('OpenSans-Bold'), url(/fonts/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
 }
 
+* {
+	font-family: 'Open Sans', sans-serif;
+}
 
 
 .left {
@@ -309,7 +312,7 @@ schoolbigblocks { overflow: hidden;}
 
 
 .outcomesBIG { display: block; font-size: 14px; font-weight: 700; margin-left: 4px; margin-top: 12px; padding: 0; line-height: 0px;}
-.outcomesSMALL { display: block; font-size: 10px; font-weight: 300; margin-left: 4px; margin-top: -8px; padding: 0; line-height: 0px;}
+.outcomesSMALL { display: block; font-size: 10px; font-weight: 700; margin-left: 4px; margin-top: -8px; padding: 0; line-height: 0px;}
 
 
 .degreeWrap {
@@ -352,9 +355,10 @@ schoolbigblocks { overflow: hidden;}
 .structureSMALL { text-transform: uppercase; display: block; position: absolute; font-size: 10px; font-weight: 300; margin-left: 16px; margin-top: 27px; padding: 0; line-height: 0px;}
 
 .structureContent {
+	color: #505050;
 	font-family: 'Open Sans';
-	font-size: 16px;
-	line-height: 22px;
+	font-size: 12px;
+	line-height: 18px;
 	margin-right: 0;
 	margin-left: 20px;
 }
