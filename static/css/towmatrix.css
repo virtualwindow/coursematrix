@@ -366,14 +366,7 @@ schoolbigblocks { overflow: hidden;}
 #structureFieldTitle {color: #404040; margin-top: 0px;}
 #structureFieldTitleArrow { color: #fbb427;}
 
-#subject {
-	background: #e5e7e9;
-	padding: 4px;
-	color: #404040;
-	font-family: 'Open Sans';
-	font-weight: 700; 
-	font-size: 12px;
-}
+
 
 #courselayoutleftwrap {
 	height: 80px;
@@ -423,10 +416,17 @@ schoolbigblocks { overflow: hidden;}
 	width: 120px;	
 }
 
-#bar0 {
+#barcore {
 	background: #57595b;
 	height: 8px;
 	width: 60px;
+	float: left;
+}
+
+#bar0 {
+	background: #0f0;
+	height: 8px;
+	width: 20px;
 	float: left;
 }
 
@@ -479,7 +479,7 @@ schoolbigblocks { overflow: hidden;}
 }
 
 .courselayoutsubjecttitle {
-	font-size: 10px; 
+	font-size: 8px; 
 	font-family: 'Open Sans';
 	font-weight: 700; 	
 	color: #fff;
@@ -511,8 +511,33 @@ schoolbigblocks { overflow: hidden;}
 	font-size: 10px; 
 	font-family: 'Open Sans';
 	font-weight: 700; 	
-	line-height: 60px
-	
+	line-height: 60px	
+}
+
+#subject {
+	background: #e5e7e9;
+	padding: 4px;
+	color: #404040;
+	font-family: 'Open Sans';
+	font-weight: 700; 
+	font-size: 12px;
+	height: 20px;
+	margin: 0 auto;
+	border-right: 4px solid #fff;
+}
+
+#subjectadderbutton {
+	border-left: 4px solid #fff;
+	float:right;
+	width: 20px;
+	background: #404040;
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	font-weight: 700; 
+	height: 20px;
+	padding: 4px;
+	cursor: pointer;
 }
 
 

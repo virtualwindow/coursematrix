@@ -244,7 +244,6 @@ var coursedata = {
 }
 
 
-
 var colors = ["#404040", "#f8b227", "#2a98d3", "#ee561d", "#917ab1", "#4ead92"]
 
 // -1 = unselected
@@ -254,6 +253,7 @@ var state = {
   field: -1,
   outcome: -1,
   year: -1,
+  majorsubjects: []
 }
 
 var updateScreen = function () {
@@ -275,6 +275,8 @@ var updateScreen = function () {
       $("#structureFieldTitle").hide();
       $("#structureTextBlockTop").html(coursedata.schoolstext[state.school])
       $("#subject").hide();
+      $("#subjectadderbutton").html("").hide()
+
       $("#subjectTextBlock").hide();  
   } /* else {
       $("#subject").hide();
@@ -308,6 +310,33 @@ var updateFields = function () {
 
   }
   updateOutcomes();
+}
+
+var updatemajors = function () {
+  for (var num in [0,1,2]) {
+    if (state.majorsubjects[num]) {
+      $("#subjectblock"+num).removeClass("courselayoutaddsubject");
+      $("#subjectblock"+num).css("background", colors[state.majorsubjects[num].school+1])
+      var shortname = coursedata.fields[state.majorsubjects[num].school][state.majorsubjects[num].field]
+      $("#subjectblock"+num+"name").html( shortname ).show();
+      $("#subjectblock"+num+"credits").html( state.majorsubjects[num].credits + " credits" ).show();
+      $("#subjectblock"+num+"add").hide();
+      //progressbar
+      $("#bar"+num).css("background", colors[state.majorsubjects[num].school+1])
+      $("#bar"+num).css("background", colors[state.majorsubjects[num].school+1]).animate( { width: state.majorsubjects[num].credits+"px"}, 500)
+
+    } else {
+      $("#subjectblock"+num+"name").hide();
+      $("#subjectblock"+num+"credits").hide();
+      $("#subjectblock"+num+"add").show();
+      $("#subjectblock"+num).addClass("courselayoutaddsubject");
+      $("#subjectblock"+num).css("background", "#e5e7e9")
+      $("#bar"+num).css("background", "#e5e7e9").animate( { width: "0px"}, 500)
+      
+
+
+    }
+  }
 }
 
 var updateOutcomes = function () {
@@ -377,6 +406,7 @@ var updateOutcomes = function () {
       ///show subjects for years
         var subjectsdisplay = []
           $("#subject").html("").hide()
+          $("#subjectadderbutton").html("").hide()
           $("#subjectTextBlock").html("").hide()
 
         for (var subject in coursedata.subjects) {
@@ -395,6 +425,7 @@ var updateOutcomes = function () {
         //display
         for (var subject in subjectsdisplay) {
           $("#subject").html(subjectsdisplay[subject].name).fadeIn(250)
+          $("#subjectadderbutton").html("+").show()
           $("#subjectTextBlock").html(subjectsdisplay[subject].description).fadeIn(250)  
         }
 
@@ -409,6 +440,7 @@ var updateOutcomes = function () {
 }
 
 $( document ).ready(function() {
+    updatemajors();
     $("#courselayoutmenu").hide()
     $("#schoolblock1text").hide()
     $("#schoolblock2text").hide()
@@ -856,7 +888,43 @@ $("#outcomes9").click( function() {
   state.outcome = 9;
   updateOutcomes();   
 })
-
   //////////////////////////////////////////////////////////
+
+$("#subjectadderbutton").click( function() {
+    //add or remove subject
+  
+    for (var subject in coursedata.subjects) {
+      if (coursedata.subjects[subject].school == state.school) {
+        if (coursedata.subjects[subject].year == state.year) {
+          if (coursedata.subjects[subject].field == state.field) {
+            state.majorsubjects.push(coursedata.subjects[subject])   
+          }
+        }            
+      }
+    }
+
+    updatemajors(); //draws html/css
+
+})
+
+$("#subjectadderbutton").hover( 
+  function () { 
+    //hoverin
+    $( "#subjectadderbutton" ).css("background", colors[state.school+1]) 
+  }, function () {
+    //hoverout
+    $( "#subjectadderbutton" ).css("background", colors[0]) 
+})
+
+
+
+
+
+
+
+
+
+
+  ////////////////////////////////////////////////////
 }); //do not delete
 
