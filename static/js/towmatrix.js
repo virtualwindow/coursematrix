@@ -298,7 +298,7 @@ var updateFields = function () {
     $("#structureTextBlockTop").html(coursedata.fieldstext[state.school][state.field]).fadeIn(350)
   }
 
-  for (var a =0; a < 5; a++) {
+  for (var a =0; a < 10; a++) {
 
         if (state.field == a) {
           $( "#field"+a ).css("background", colors[state.school+1])
