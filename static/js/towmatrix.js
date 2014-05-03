@@ -202,7 +202,8 @@ var coursedata = {
       { year: 3, school: 1, field: 4, name: "Production Design 301", description: "Students consolidate and expand their production design skills through practical application to real and imagined projects. Advanced production design considerations such as the psychology of colour and texture in film, the use of symbology and metaphor, and production design special effects are investigated. Production design budget, scheduling and communication are dealt with in depth. The wider application of production design principles in corporate environments including, exhibitions, installations, events and other site specific, thematically driven, temporary design scenarios is addressed and explored through real and/or imagined projects. Emphasis throughout is placed on integrating the production design knowledge gained in the previous two years with practical application.", credits: 20},
       { year: 1, school: 1, field: 5, name: "Screen Acting 101", description: "In Screen Acting 1 students explore the basic tools of every actor, which are breath control, speech, movement, improvisation and play. Students are introduced to the requirements for screen acting and are given the opportunity to explore the needed skill-set for this profession. Emphasis is placed on freeing up and focusing the student’s body and imagination. The final quarter of the year the course focuses on the essential element of acting for screen, the close up shot.", credits: 20},
       { year: 2, school: 1, field: 5, name: "Screen Acting 201", description: "In Screen Acting 2 Degree students build on the foundations laid in year one with an emphasis on honing the student’s body, exploring characterization and gaining an in-depth knowledge of the technical challenges involved in acting for film and television. Students will gain the ability to address individual problems in vocal production and habitual body patterns. Students are introduced to the master acting theories of Strassberg, Stanislavski and “The Method”. Students are introduced to the specific needs unique to acting for television and gain a solid foundation in the technical challenges of working with the film and TV director, the equipment involved with each genre and work-ethic on set.", credits: 20},
-      { year: 3, school: 1, field: 5, name: "Screen Acting 301", description: "Screen Acting 3 Degree focus on fine-tuning the student’s acting process in order to enable him/her to embark on a successful screen-acting career. Students further their studies in the techniques of Meisner, Strassberg and “The Method”. Students are introduced to the world of the audio performance and voice-overs. Students gain insight and experience in the comedic acting process and auditioning techniques. Emphasis is placed on preparing the actor for the industry by providing numerous Master classes with industry professionals, such as working actors, casting directors and agents. Specific business skills unique to the professional working actor are highlighted. Students will be required to collaborate with the film-department on their final projects, in order to build material for their show reels. Students will also experience working behind the camera and directing fellow actors.", credits: 20},ts: 20},{ year: 1, school: 1, field: 6, name: "Screenwriting 101", description: "The Screenwriting course comprises of a series of lectures on screenwriting as a fundamental aspect of the motion picture arts. It aims to develop the student’s abilities to master the basic understanding of how a screenplay and it’s supporting documents are read and written.", credits: 20},
+      { year: 3, school: 1, field: 5, name: "Screen Acting 301", description: "Screen Acting 3 Degree focus on fine-tuning the student’s acting process in order to enable him/her to embark on a successful screen-acting career. Students further their studies in the techniques of Meisner, Strassberg and “The Method”. Students are introduced to the world of the audio performance and voice-overs. Students gain insight and experience in the comedic acting process and auditioning techniques. Emphasis is placed on preparing the actor for the industry by providing numerous Master classes with industry professionals, such as working actors, casting directors and agents. Specific business skills unique to the professional working actor are highlighted. Students will be required to collaborate with the film-department on their final projects, in order to build material for their show reels. Students will also experience working behind the camera and directing fellow actors.", credits: 20},
+      { year: 1, school: 1, field: 6, name: "Screenwriting 101", description: "The Screenwriting course comprises of a series of lectures on screenwriting as a fundamental aspect of the motion picture arts. It aims to develop the student’s abilities to master the basic understanding of how a screenplay and it’s supporting documents are read and written.", credits: 20},
       { year: 2, school: 1, field: 6, name: "Screenwriting 201", description: "The Screenwriting course comprises of a series of lectures on screenwriting as a fundamental aspect of the motion picture arts. It aims to develop the student’s abilities to master the intricacies of a screenplay’s structure, screenplay adaptation and the screenwriter’s role in the motion picture production process.", credits: 20},
       { year: 3, school: 1, field: 6, name: "Screenwriting 301", description: "The Screenwriting course comprises of a series of lectures on screenwriting as a fundamental aspect of the motion picture arts. It aims to develop the student’s abilities to master the writing of characters and dialogue to enhance an actor’s performance, the process of working with other writers on a teleplay (screenplay for television) and the writing and reviewing of feature length screenplays.", credits: 20},
       { year: 1, school: 1, field: 7, name: "Sound Design 101", description: "The Sound Design 101 course is aimed at creating a well-rooted foundation and understanding of the principals of sound and digital audio. The students will be taught how to communicate in sound, principles and practice of capturing sound as well as the theory of digital audio. Students will also be introduced to the concept of a Digital Audio Workstation (DAW), and the student will learn the functionality of the DAW and how to record, edit and process audio for a broad range of applications.", credits: 20},
@@ -256,7 +257,7 @@ var state = {
 }
 
 var updateScreen = function () {
-  for (var a = 0; a < 5; a++) {
+  for (var a = 0; a < 10; a++) {
     $("#field"+a).hide();  
   }  
 
@@ -729,6 +730,32 @@ $( document ).ready(function() {
       }
     );   
 
+$( "#field5" ).hover( 
+  function() { $( "#field5" ).css("background", colors[state.school+1]) }, //hover on
+  function() { if (state.field == 5) { $( "#field5" ).css("background", colors[state.school+1]) } else { $( "#field5" ).css("background", colors[0]) } } //hover off
+);  
+
+$( "#field6" ).hover( 
+  function() { $( "#field6" ).css("background", colors[state.school+1]) }, //hover on
+  function() { if (state.field == 6) { $( "#field6" ).css("background", colors[state.school+1]) } else { $( "#field6" ).css("background", colors[0]) } } //hover off
+);  
+
+$( "#field7" ).hover( 
+  function() { $( "#field7" ).css("background", colors[state.school+1]) }, //hover on
+  function() { if (state.field == 7) { $( "#field7" ).css("background", colors[state.school+1]) } else { $( "#field7" ).css("background", colors[0]) } } //hover off
+);  
+
+$( "#field8" ).hover( 
+  function() { $( "#field8" ).css("background", colors[state.school+1]) }, //hover on
+  function() { if (state.field == 8) { $( "#field8" ).css("background", colors[state.school+1]) } else { $( "#field8" ).css("background", colors[0]) } } //hover off
+);  
+
+$( "#field9" ).hover( 
+  function() { $( "#field9" ).css("background", colors[state.school+1]) }, //hover on
+  function() { if (state.field == 9) { $( "#field9" ).css("background", colors[state.school+1]) } else { $( "#field9" ).css("background", colors[0]) } } //hover off
+);  
+
+
   $( "#field0" ).click( function() {
     state.field = 0;    
     updateFields();          
@@ -754,6 +781,30 @@ $( document ).ready(function() {
     updateFields();        
   });
 
+  $( "#field5" ).click( function() {
+    state.field = 5;
+    updateFields();        
+  });
+
+  $( "#field6" ).click( function() {
+    state.field = 6;
+    updateFields();        
+  });
+
+  $( "#field7" ).click( function() {
+    state.field = 7;
+    updateFields();        
+  });
+
+  $( "#field8" ).click( function() {
+    state.field = 8;
+    updateFields();        
+  });      
+
+  $( "#field9" ).click( function() {
+    state.field = 9;
+    updateFields();        
+  });  
     //////////////////////////////////////////////////////////
 
 $("#outcomes0").click( function() {
