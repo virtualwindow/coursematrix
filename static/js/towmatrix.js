@@ -339,6 +339,17 @@ var updatemajors = function () {
   }
 }
 
+var checkifmajorchosen = function () {
+  //if already added the current subject on the current page
+  var status = 0;
+  for (var major in state.majorsubjects) {
+    if ((state.year == state.majorsubjects[major].year)&&(state.field == state.majorsubjects[major].field)&&(state.school == state.majorsubjects[major].school)) {
+      status = 1;
+    }
+  }
+  return status
+}
+
 var updateOutcomes = function () {
     for (var a = 0; a < 7; a++) {
       if (a == state.outcome) {
@@ -425,7 +436,21 @@ var updateOutcomes = function () {
         //display
         for (var subject in subjectsdisplay) {
           $("#subject").html(subjectsdisplay[subject].name).fadeIn(250)
-          $("#subjectadderbutton").html("+").show()
+
+          
+          
+          if (checkifmajorchosen() == 1) {
+            $("#subjectadderbutton").html("-").show()
+          } else {
+            if (state.majorsubjects.length < 3) {
+              $("#subjectadderbutton").html("+").show()  
+            } else {
+              $("#subjectadderbutton").fadeOut(100);
+            }
+            
+          }
+          
+          
           $("#subjectTextBlock").html(subjectsdisplay[subject].description).fadeIn(250)  
         }
 
@@ -897,14 +922,28 @@ $("#subjectadderbutton").click( function() {
       if (coursedata.subjects[subject].school == state.school) {
         if (coursedata.subjects[subject].year == state.year) {
           if (coursedata.subjects[subject].field == state.field) {
-            state.majorsubjects.push(coursedata.subjects[subject])   
+
+            if (checkifmajorchosen() == 1) {
+                
+                state.majorsubjects = state.majorsubjects.filter( function (element) {
+                  if ((element.field == state.field)&&(element.school == state.school)&&(element.year == state.year)) {
+                    return 0
+                  }else {return 1;}
+                })
+
+            } else {
+              state.majorsubjects.push(coursedata.subjects[subject])   
+            }
+
+
+
           }
         }            
       }
     }
 
     updatemajors(); //draws html/css
-
+    updateOutcomes();
 })
 
 $("#subjectadderbutton").hover( 
