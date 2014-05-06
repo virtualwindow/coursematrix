@@ -393,6 +393,22 @@ var updateOutcomes = function () {
       $("#outcomes9").css("background", colors[0])
       $("#courselayoutleftcontentyear").html(1).show()
       $("#courselayoutleftcontenttitle").html("Foundation Year").show()
+      $("#coresubjectsblock").removeClass("pure-u-1-6").addClass("pure-u-1-3")
+      $("#coresubjectsblock0").removeClass("pure-u-1-1").addClass("pure-u-1-2")
+      $("#coresubjectsblock1").show()
+      $("#coresubjectsblock2").removeClass("pure-u-1-1").addClass("pure-u-1-2")      
+      $("#coresubjectsblock3").show()
+
+      $(".coreleft").addClass("left");
+      $("#majorsubjectsblock").removeClass("pure-u-1-6").addClass("pure-u-1-3")
+      $(".majorsubjectsblocks").removeClass("pure-u-1-1").addClass("pure-u-1-2")
+      $("#subjectblock0").addClass("left")
+      $("#subjectblock1").addClass("right").css("margin-top", "0px")
+      $("#subjectblock2").addClass("left").show()
+      $(".courselayoutsubjectwrap").css("padding-top","13px").css("padding-bottom","13px")
+
+      $("#compulsorysubjectsblock").hide();
+      $("#choiceelectivemenu").hide();
     }
     
     if (state.year == 2) {
@@ -401,6 +417,26 @@ var updateOutcomes = function () {
       $("#outcomes9").css("background", colors[0])   
       $("#courselayoutleftcontentyear").html(2).show()
       $("#courselayoutleftcontenttitle").html("Second Year").show()
+
+      $("#coresubjectsblock").removeClass("pure-u-1-3").addClass("pure-u-1-6")
+      $("#coresubjectsblock0").removeClass("pure-u-1-2").addClass("pure-u-1-1")
+      $("#coresubjectsblock1").hide()
+      $("#coresubjectsblock2").removeClass("pure-u-1-2").addClass("pure-u-1-1")
+      $("#coresubjectsblock3").hide()
+
+      $(".coreleft").removeClass("left");
+
+      $("#majorsubjectsblock").removeClass("pure-u-1-3").addClass("pure-u-1-6")
+      $(".majorsubjectsblocks").removeClass("pure-u-1-2").addClass("pure-u-1-1")
+      $("#subjectblock0").removeClass("left")
+      $("#subjectblock1").removeClass("right").css("margin-top", "8px")
+      $("#subjectblock2").removeClass("left").hide();
+
+      $("#compulsorysubjectsblock").show();
+      $(".courselayoutsubjectwrap").css("padding-top","13px").css("padding-bottom","13px")
+
+      $("#choiceelectivemenu").show();
+
     }
 
     if (state.year == 3) {
@@ -409,6 +445,25 @@ var updateOutcomes = function () {
       $("#outcomes9").css("background", colors[state.school+1])
       $("#courselayoutleftcontentyear").html(3).show()
       $("#courselayoutleftcontenttitle").html("Third Year").show()
+
+      $("#coresubjectsblock").removeClass("pure-u-1-3").addClass("pure-u-1-6")
+      $("#coresubjectsblock0").removeClass("pure-u-1-2").addClass("pure-u-1-1")
+      $("#coresubjectsblock1").hide()
+      $("#coresubjectsblock2").removeClass("pure-u-1-2").addClass("pure-u-1-1")
+      $("#coresubjectsblock3").hide()
+
+      $(".coreleft").removeClass("left");
+
+      $("#majorsubjectsblock").removeClass("pure-u-1-3").addClass("pure-u-1-6")
+      $(".majorsubjectsblocks").removeClass("pure-u-1-2").addClass("pure-u-1-1")
+      $("#subjectblock0").removeClass("left")
+      $("#subjectblock1").removeClass("right").css("margin-top", "8px")
+      $("#subjectblock2").removeClass("left").hide();
+
+      $("#compulsorysubjectsblock").show();
+      $(".courselayoutsubjectwrap").css("padding-top","13px").css("padding-bottom","13px")
+
+      $("#choiceelectivemenu").show();
     }
 
     
@@ -466,6 +521,7 @@ var updateOutcomes = function () {
 
 $( document ).ready(function() {
     updatemajors();
+    $("#choiceelectivemenu").hide()
     $("#courselayoutmenu").hide()
     $("#schoolblock1text").hide()
     $("#schoolblock2text").hide()
