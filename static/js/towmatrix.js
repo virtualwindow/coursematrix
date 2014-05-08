@@ -354,8 +354,12 @@ var updateOutcomes = function () {
     for (var a = 0; a < 7; a++) {
       if (a == state.outcome) {
         $("#outcomes"+a).css("border-left", "8px "+colors[state.school+1]+" solid")
+        $("#outcome"+a+"heading").fadeIn(250)
+        $("#outcome"+a+"block").fadeIn(250)
       } else {
         $("#outcomes"+a).css("border-left", "8px "+colors[0]+" solid") 
+        $("#outcome"+a+"heading").hide();
+        $("#outcome"+a+"block").hide();
       }
     } 
 
@@ -368,6 +372,12 @@ var updateOutcomes = function () {
       $("#outcomes7").delay(200).fadeOut(250);
       $("#outcomes8").delay(100).fadeOut(250);      
       $("#outcomes9").delay(0).fadeOut(250);
+    }
+
+
+    if (state.outcome == 0) {
+      //carreers
+      $(".carreerwrapper").css("color", colors[state.school+1])
     }
 
     if (state.outcome == 6) {      
@@ -521,6 +531,7 @@ var updateOutcomes = function () {
 
 $( document ).ready(function() {
     updatemajors();
+    updateOutcomes();
     $("#choiceelectivemenu").hide()
     $("#courselayoutmenu").hide()
     $("#schoolblock1text").hide()

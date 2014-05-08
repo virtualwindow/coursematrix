@@ -576,3 +576,24 @@ schoolbigblocks { overflow: hidden;}
 	margin: 0 2px 0 2px;
 	white-space:nowrap;
 }
+
+.carreerwrapper {
+	color: #f00;
+	font-size: 18px; 
+	margin-top:16px;
+}
+
+.carreer {
+	margin-left: 16px;
+	margin-top: -5px;
+
+	color: #404040;
+	font-size: 13px; 
+	line-height: 16px;
+	font-family: 'Open Sans';
+}
+
+.carreer span {
+	color: #000;
+	font-weight: 700; 
+}
