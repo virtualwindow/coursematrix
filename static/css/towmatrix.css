@@ -514,8 +514,50 @@ schoolbigblocks { overflow: hidden;}
 	line-height: 60px	
 }
 
+#accordion {
+    list-style: none;
+    padding: 0 0 0 0;
+}
+#accordion div {
+    cursor: pointer;
+    list-style: none;
+    padding: 4px;
+    margin: 0 auto;
+}
+#accordion ul {
+    list-style: none;
+    padding: 0 0 0 0;
+}
+#accordion ul{
+    display: none;
+}
+#accordion ul li {
+    font-weight: normal;
+    cursor: auto;
+    background-color: #fff;
+    padding: 0 0 0 0;
+}
+#accordion a {
+    text-decoration: none;
+}
+#accordion a:hover {
+    text-decoration: none;
+}
+
 #subject {
 	background: #e5e7e9;
+	padding: 4px;
+	color: #404040;
+	font-family: 'Open Sans';
+	font-weight: 700; 
+	font-size: 12px;
+	height: 20px;
+	margin: 0 auto;
+	border-right: 4px solid #fff;
+}
+
+#subject:hover {
+	background: #dadada;
 	padding: 4px;
 	color: #404040;
 	font-family: 'Open Sans';
@@ -530,7 +572,7 @@ schoolbigblocks { overflow: hidden;}
 	border-left: 4px solid #fff;
 	float:right;
 	width: 20px;
-	background: #404040;
+	background: #81888b;
 	color: #fff;
 	font-size: 18px;
 	text-align: center;

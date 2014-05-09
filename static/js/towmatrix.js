@@ -244,7 +244,7 @@ var coursedata = {
 }
 
 
-var colors = ["#404040", "#f8b227", "#2a98d3", "#ee561d", "#917ab1", "#4ead92"]
+var colors = ["#404040", "#f8b227", "#2a98d3", "#ee561d", "#917ab1", "#4ead92", "#81888b"]
 
 // -1 = unselected
 // numbers represent the index of the element above, in coursedata
@@ -514,8 +514,7 @@ var updateOutcomes = function () {
             }
             
           }
-          
-          
+ 
           $("#subjectTextBlock").html(subjectsdisplay[subject].description).fadeIn(250)  
         }
 
@@ -528,7 +527,7 @@ var updateOutcomes = function () {
 
 
 }
-
+    
 $( document ).ready(function() {
     updatemajors();
     updateOutcomes();
@@ -780,6 +779,15 @@ $( document ).ready(function() {
       }
     );
 
+    //accordion subject
+        $("#accordion > li > div").click(function(){
+            if(false == $(this).children().is(':visible')) {
+                $('#accordion > li > ul').slideToggle();
+            }
+            $(this).children('ul').slideToggle();
+        });
+        $('#accordion ul:eq(0)').show();
+
     ////////////////////////////////////////////////////////
     /* FIELDS */
 
@@ -1019,7 +1027,7 @@ $("#subjectadderbutton").hover(
     $( "#subjectadderbutton" ).css("background", colors[state.school+1]) 
   }, function () {
     //hoverout
-    $( "#subjectadderbutton" ).css("background", colors[0]) 
+    $( "#subjectadderbutton" ).css("background", colors[6]) 
 })
 
 
