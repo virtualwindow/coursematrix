@@ -175,6 +175,189 @@ var coursedata = {
       "Sculpting field description", 
       "Painting field description"]
     ],
+    courselist: [
+     {outcome:1,school:0,field:0,name:"short course design studies com design 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:1,school:0,field:0,name:"short course design studies com design 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:1,school:0,field:0,name:"short course design studies com design 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},
+     {outcome:1,school:0,field:1,name:"short course design studies illustration 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:1,school:0,field:1,name:"short course design studies illustration 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:1,school:0,field:1,name:"short course design studies illustration 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},
+     {outcome:1,school:0,field:2,name:"short course design studies photography 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:1,school:0,field:2,name:"short course design studies photography 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:1,school:0,field:2,name:"short course design studies photography 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},    
+     
+     {outcome:1,school:1,field:0,name:"short course film arts 3d animation 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:1,school:1,field:0,name:"short course film arts 3d animation 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:1,school:1,field:0,name:"short course film arts 3d animation 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},       
+     {outcome:1,school:1,field:1,name:"short course film arts film tv 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:1,school:1,field:1,name:"short course film arts film tv 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:1,school:1,field:1,name:"short course film arts film tv 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},         
+     {outcome:1,school:1,field:2,name:"short course film arts game design 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:1,school:1,field:2,name:"short course film arts game design 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:1,school:1,field:2,name:"short course film arts game design 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},       
+     {outcome:1,school:1,field:3,name:"short course film arts motion design 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:1,school:1,field:3,name:"short course film arts motion design 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:1,school:1,field:3,name:"short course film arts motion design 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},          
+     {outcome:1,school:1,field:4,name:"short course film arts production design 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:1,school:1,field:4,name:"short course film arts production design 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:1,school:1,field:4,name:"short course film arts production design 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},      
+     {outcome:1,school:1,field:5,name:"short course film arts screen acting 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:1,school:1,field:5,name:"short course film arts screen acting 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:1,school:1,field:5,name:"short course film arts screen acting 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},       
+     {outcome:1,school:1,field:6,name:"short course film arts screenwriting 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:1,school:1,field:6,name:"short course film arts screenwriting 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:1,school:1,field:6,name:"short course film arts screenwriting 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},          
+     {outcome:1,school:1,field:7,name:"short course film arts sound design 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:1,school:1,field:7,name:"short course film arts sound design 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:1,school:1,field:7,name:"short course film arts sound design 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},         
+     {outcome:1,school:2,field:0,name:"short course interactive arts interactive design 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:1,school:2,field:0,name:"short course interactive arts interactive design 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:1,school:2,field:0,name:"short course interactive arts interactive design 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},
+     {outcome:1,school:2,field:1,name:"short course interactive arts interactive development 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:1,school:2,field:1,name:"short course interactive arts interactive development 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:1,school:2,field:1,name:"short course interactive arts interactive development 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},
+     {outcome:1,school:2,field:2,name:"short course interactive arts form and space 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:1,school:2,field:2,name:"short course interactive arts form and space 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:1,school:2,field:2,name:"short course interactive arts form and space 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},       
+    
+     {outcome:1,school:3,field:0,name:"short course visual arts art 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:1,school:3,field:0,name:"short course visual arts art 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:1,school:3,field:0,name:"short course visual arts art 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},       
+     {outcome:1,school:3,field:1,name:"short course visual arts drawing 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:1,school:3,field:1,name:"short course visual arts drawing 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:1,school:3,field:1,name:"short course visual arts drawing 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},         
+     {outcome:1,school:3,field:2,name:"short course visual arts animation 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:1,school:3,field:2,name:"short course visual arts animation 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:1,school:3,field:2,name:"short course visual arts animation 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},       
+     {outcome:1,school:3,field:3,name:"short course visual arts sculpting 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:1,school:3,field:3,name:"short course visual arts sculpting 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:1,school:3,field:3,name:"short course visual arts sculpting 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},          
+     {outcome:1,school:3,field:4,name:"short course visual arts painting 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:1,school:3,field:4,name:"short course visual arts painting 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:1,school:3,field:4,name:"short course visual arts painting 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},  
+
+
+     {outcome:2,school:0,field:0,name:"short learning prog design studies com design 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:2,school:0,field:0,name:"short learning prog design studies com design 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:2,school:0,field:0,name:"short learning prog design studies com design 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},
+     {outcome:2,school:0,field:1,name:"short learning prog design studies illustration 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:2,school:0,field:1,name:"short learning prog design studies illustration 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:2,school:0,field:1,name:"short learning prog design studies illustration 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},
+     {outcome:2,school:0,field:2,name:"short learning prog design studies photography 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:2,school:0,field:2,name:"short learning prog design studies photography 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:2,school:0,field:2,name:"short learning prog design studies photography 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},    
+     
+     {outcome:2,school:1,field:0,name:"short learning prog film arts 3d animation 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:2,school:1,field:0,name:"short learning prog film arts 3d animation 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:2,school:1,field:0,name:"short learning prog film arts 3d animation 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},       
+     {outcome:2,school:1,field:1,name:"short learning prog film arts film tv 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:2,school:1,field:1,name:"short learning prog film arts film tv 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:2,school:1,field:1,name:"short learning prog film arts film tv 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},         
+     {outcome:2,school:1,field:2,name:"short learning prog film arts game design 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:2,school:1,field:2,name:"short learning prog film arts game design 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:2,school:1,field:2,name:"short learning prog film arts game design 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},       
+     {outcome:2,school:1,field:3,name:"short learning prog film arts motion design 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:2,school:1,field:3,name:"short learning prog film arts motion design 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:2,school:1,field:3,name:"short learning prog film arts motion design 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},          
+     {outcome:2,school:1,field:4,name:"short learning prog film arts production design 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:2,school:1,field:4,name:"short learning prog film arts production design 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:2,school:1,field:4,name:"short learning prog film arts production design 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},      
+     {outcome:2,school:1,field:5,name:"short learning prog film arts screen acting 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:2,school:1,field:5,name:"short learning prog film arts screen acting 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:2,school:1,field:5,name:"short learning prog film arts screen acting 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},       
+     {outcome:2,school:1,field:6,name:"short learning prog film arts screenwriting 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:2,school:1,field:6,name:"short learning prog film arts screenwriting 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:2,school:1,field:6,name:"short learning prog film arts screenwriting 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},          
+     {outcome:2,school:1,field:7,name:"short learning prog film arts sound design 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:2,school:1,field:7,name:"short learning prog film arts sound design 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:2,school:1,field:7,name:"short learning prog film arts sound design 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},         
+     {outcome:2,school:2,field:0,name:"short learning prog interactive arts interactive design 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:2,school:2,field:0,name:"short learning prog interactive arts interactive design 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:2,school:2,field:0,name:"short learning prog interactive arts interactive design 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},
+     {outcome:2,school:2,field:1,name:"short learning prog interactive arts interactive development 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:2,school:2,field:1,name:"short learning prog interactive arts interactive development 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:2,school:2,field:1,name:"short learning prog interactive arts interactive development 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},
+     {outcome:2,school:2,field:2,name:"short learning prog interactive arts form and space 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:2,school:2,field:2,name:"short learning prog interactive arts form and space 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:2,school:2,field:2,name:"short learning prog interactive arts form and space 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},       
+    
+     {outcome:2,school:3,field:0,name:"short learning prog visual arts art 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:2,school:3,field:0,name:"short learning prog visual arts art 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:2,school:3,field:0,name:"short learning prog visual arts art 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},       
+     {outcome:2,school:3,field:1,name:"short learning prog visual arts drawing 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:2,school:3,field:1,name:"short learning prog visual arts drawing 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:2,school:3,field:1,name:"short learning prog visual arts drawing 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},         
+     {outcome:2,school:3,field:2,name:"short learning prog visual arts animation 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:2,school:3,field:2,name:"short learning prog visual arts animation 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:2,school:3,field:2,name:"short learning prog visual arts animation 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},       
+     {outcome:2,school:3,field:3,name:"short learning prog visual arts sculpting 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:2,school:3,field:3,name:"short learning prog visual arts sculpting 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:2,school:3,field:3,name:"short learning prog visual arts sculpting 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},          
+     {outcome:2,school:3,field:4,name:"short learning prog visual arts painting 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:2,school:3,field:4,name:"short learning prog visual arts painting 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:2,school:3,field:4,name:"short learning prog visual arts painting 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},  
+
+
+     {outcome:3,school:0,field:0,name:"prof short course design studies com design 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:3,school:0,field:0,name:"prof short course design studies com design 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:3,school:0,field:0,name:"prof short course design studies com design 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},
+     {outcome:3,school:0,field:1,name:"prof short course design studies illustration 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:3,school:0,field:1,name:"prof short course design studies illustration 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:3,school:0,field:1,name:"prof short course design studies illustration 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},
+     {outcome:3,school:0,field:2,name:"prof short course design studies photography 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:3,school:0,field:2,name:"prof short course design studies photography 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:3,school:0,field:2,name:"prof short course design studies photography 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},    
+     
+     {outcome:3,school:1,field:0,name:"prof short course film arts 3d animation 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:3,school:1,field:0,name:"prof short course film arts 3d animation 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:3,school:1,field:0,name:"prof short course film arts 3d animation 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},       
+     {outcome:3,school:1,field:1,name:"prof short course film arts film tv 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:3,school:1,field:1,name:"prof short course film arts film tv 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:3,school:1,field:1,name:"prof short course film arts film tv 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},         
+     {outcome:3,school:1,field:2,name:"prof short course film arts game design 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:3,school:1,field:2,name:"prof short course film arts game design 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:3,school:1,field:2,name:"prof short course film arts game design 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},       
+     {outcome:3,school:1,field:3,name:"prof short course film arts motion design 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:3,school:1,field:3,name:"prof short course film arts motion design 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:3,school:1,field:3,name:"prof short course film arts motion design 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},          
+     {outcome:3,school:1,field:4,name:"prof short course film arts production design 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:3,school:1,field:4,name:"prof short course film arts production design 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:3,school:1,field:4,name:"prof short course film arts production design 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},      
+     {outcome:3,school:1,field:5,name:"prof short course film arts screen acting 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:3,school:1,field:5,name:"prof short course film arts screen acting 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:3,school:1,field:5,name:"prof short course film arts screen acting 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},       
+     {outcome:3,school:1,field:6,name:"prof short course film arts screenwriting 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:3,school:1,field:6,name:"prof short course film arts screenwriting 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:3,school:1,field:6,name:"prof short course film arts screenwriting 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},          
+     {outcome:3,school:1,field:7,name:"prof short course film arts sound design 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:3,school:1,field:7,name:"prof short course film arts sound design 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:3,school:1,field:7,name:"prof short course film arts sound design 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},         
+     {outcome:3,school:2,field:0,name:"prof short course interactive arts interactive design 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:3,school:2,field:0,name:"prof short course interactive arts interactive design 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:3,school:2,field:0,name:"prof short course interactive arts interactive design 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},
+     {outcome:3,school:2,field:1,name:"prof short course interactive arts interactive development 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:3,school:2,field:1,name:"prof short course interactive arts interactive development 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:3,school:2,field:1,name:"prof short course interactive arts interactive development 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},
+     {outcome:3,school:2,field:2,name:"prof short course interactive arts form and space 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:3,school:2,field:2,name:"prof short course interactive arts form and space 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:3,school:2,field:2,name:"prof short course interactive arts form and space 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},       
+    
+     {outcome:3,school:3,field:0,name:"prof short course visual arts art 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:3,school:3,field:0,name:"prof short course visual arts art 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:3,school:3,field:0,name:"prof short course visual arts art 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},       
+     {outcome:3,school:3,field:1,name:"prof short course visual arts drawing 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:3,school:3,field:1,name:"prof short course visual arts drawing 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:3,school:3,field:1,name:"prof short course visual arts drawing 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},         
+     {outcome:3,school:3,field:2,name:"prof short course visual arts animation 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:3,school:3,field:2,name:"prof short course visual arts animation 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:3,school:3,field:2,name:"prof short course visual arts animation 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},       
+     {outcome:3,school:3,field:3,name:"prof short course visual arts sculpting 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:3,school:3,field:3,name:"prof short course visual arts sculpting 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:3,school:3,field:3,name:"prof short course visual arts sculpting 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},          
+     {outcome:3,school:3,field:4,name:"prof short course visual arts painting 1", description:"Learn tos. Control how Web content responds to variations in screen sizes and device capabilities."},
+     {outcome:3,school:3,field:4,name:"prof short course visual arts painting 2", description:"Learn to tablets and mobile dewvices. Control howin screen sizes and device capabilities."},
+     {outcome:3,school:3,field:4,name:"prof short course visual arts painting 3", description:"Learnp computers to tablets and mobile dewvices. Coons in screen sizes and device capabilities."},           
+    ],
     subjects: [
       { year: 1, school: 0, field: 0, name: "Communication Design 101", description: "Students are introduced to the fundamentals of design principles, theories, typography, image and text integration, as well as basic print reproduction processes.", credits: 20},
       { year: 2, school: 0, field: 0, name: "Communication Design 201", description: "Students are introduced to all the possible fields that a visual communicator could be involved in. Through a more advanced and in-depth approach, the student must be able to analyse and solve different types of visual communication problems successfully.", credits: 20},
@@ -351,7 +534,7 @@ var checkifmajorchosen = function () {
 }
 
 var updateOutcomes = function () {
-    for (var a = 0; a < 7; a++) {
+    for (var a = 0; a < 10; a++) {
       if (a == state.outcome) {
         $("#outcomes"+a).css("border-left", "8px "+colors[state.school+1]+" solid")
         $("#outcome"+a+"heading").fadeIn(250)
@@ -379,6 +562,39 @@ var updateOutcomes = function () {
       //carreers
       $(".carreerwrapper").css("color", colors[state.school+1])
     }
+
+
+    if ((state.outcome == 1)||(state.outcome == 2)||(state.outcome == 3)) {      
+      var subjectlist = "";
+      for (course in coursedata.courselist) {
+
+        if (state.field >= 0) {
+          if ((coursedata.courselist[course].outcome == state.outcome)&&(coursedata.courselist[course].field == state.field)&&(coursedata.courselist[course].school == state.school)) {
+            subjectlist += '<li><div id="subjectbar"><div id="subjectadderbutton">+</div><div id="subject">'+coursedata.courselist[course].name+'</div><ul><li><p id="subjectTextBlock">'+coursedata.courselist[course].description+'</p></li></ul></li>';                  
+          }  
+        } else {
+          if ((coursedata.courselist[course].outcome == state.outcome)&&(coursedata.courselist[course].school == state.school)) {
+            subjectlist += '<li><div id="subjectbar"><div id="subjectadderbutton">+</div><div id="subject">'+coursedata.courselist[course].name+'</div><ul><li><p id="subjectTextBlock">'+coursedata.courselist[course].description+'</p></li></ul></li>';                  
+          }            
+        }
+        
+
+      }
+
+      $("#accordion").html(subjectlist)
+
+
+    //accordion subject
+        $("#accordion > li > div").click(function(){
+            if(false == $(this).children().is(':visible')) {
+                $('#accordion > li > ul').slideToggle();
+            }
+            $(this).children('ul').slideToggle();
+        });
+        $('#accordion ul:eq(0)').show();
+
+    }
+
 
     if (state.outcome == 6) {      
       $("#outcomes7").delay(0).fadeIn(250);
