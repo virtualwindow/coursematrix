@@ -436,7 +436,8 @@ var state = {
   field: -1,
   outcome: -1,
   year: -1,
-  majorsubjects: []
+  majorsubjects: [],
+  selectedcourses: [],
 }
 
 var updateScreen = function () {
@@ -457,8 +458,8 @@ var updateScreen = function () {
   if (state.field == -1) {
       $("#structureFieldTitle").hide();
       $("#structureTextBlockTop").html(coursedata.schoolstext[state.school])
-      $("#subject").hide();
-      $("#subjectadderbutton").html("").hide()
+      $("#subjectname").hide();
+      $(".subjectadderbutton").html("").hide()
 
       $("#subjectTextBlock").hide();  
   } /* else {
@@ -565,33 +566,125 @@ var updateOutcomes = function () {
 
 
     if ((state.outcome == 1)||(state.outcome == 2)||(state.outcome == 3)) {      
-      var subjectlist = "";
-      for (course in coursedata.courselist) {
+          var subjectlist = "";
+          for (course in coursedata.courselist) 
+          {
 
-        if (state.field >= 0) {
-          if ((coursedata.courselist[course].outcome == state.outcome)&&(coursedata.courselist[course].field == state.field)&&(coursedata.courselist[course].school == state.school)) {
-            subjectlist += '<li><div id="subjectbar"><div id="subjectadderbutton">+</div><div id="subject">'+coursedata.courselist[course].name+'</div><ul><li><p id="subjectTextBlock">'+coursedata.courselist[course].description+'</p></li></ul></li>';                  
-          }  
-        } else {
-          if ((coursedata.courselist[course].outcome == state.outcome)&&(coursedata.courselist[course].school == state.school)) {
-            subjectlist += '<li><div id="subjectbar"><div id="subjectadderbutton">+</div><div id="subject">'+coursedata.courselist[course].name+'</div><ul><li><p id="subjectTextBlock">'+coursedata.courselist[course].description+'</p></li></ul></li>';                  
-          }            
-        }
-        
-
-      }
-
-      $("#accordion").html(subjectlist)
-
-
-    //accordion subject
-        $("#accordion > li > div").click(function(){
-            if(false == $(this).children().is(':visible')) {
-                $('#accordion > li > ul').slideToggle();
+            var haveselected = false;
+            for (selectedcourse in state.selectedcourses) {
+              if (state.selectedcourses[selectedcourse].name == coursedata.courselist[course].name) {
+                haveselected = true;
+              }
             }
-            $(this).children('ul').slideToggle();
-        });
-        $('#accordion ul:eq(0)').show();
+
+            //if field selected list only this field courses
+            if ((coursedata.courselist[course].outcome == state.outcome)&&(coursedata.courselist[course].field == state.field)&&(coursedata.courselist[course].school == state.school)) {
+              
+              
+              if (haveselected == false) {
+                subjectlist += '<li><div id="subjectbar"><div class="subjectadderbutton"';
+                subjectlist += 'data-mode="add" data-name="'+coursedata.courselist[course].name+'">+</div>';  
+                subjectlist += '<div id="subjectname">'+coursedata.courselist[course].name+'</div></div>';
+              } 
+              
+              if (haveselected == true) {
+                subjectlist += '<li><div id="subjectbar" ><div class="subjectadderbutton"';
+                subjectlist += 'data-mode="remove" data-name="'+coursedata.courselist[course].name+'">-</div>';  
+                subjectlist += '<div id="subjectname" style="background: '+colors[state.school+1]+';">'+coursedata.courselist[course].name+'</div></div>';
+              }
+
+              
+              subjectlist += '<p id="subjectTextBlock">'+coursedata.courselist[course].description+'</p></li>';                  
+            }  
+            
+          }
+
+          $("#accordion").html(subjectlist);
+
+          $(".subjectadderbutton").click( function () {
+            if ($(this).data("mode") == "add") 
+            {
+              for (course in coursedata.courselist) 
+              {
+                if ($(this).data("name") == coursedata.courselist[course].name) {
+                  state.selectedcourses.push(coursedata.courselist[course])    
+                }  
+              }              
+            }
+
+            if ($(this).data("mode") == "remove") 
+            {
+              var id = -1;
+              for (course in state.selectedcourses) 
+              {                
+                if ($(this).data("name") == state.selectedcourses[course].name) 
+                {
+                  id = course;
+                }
+                
+              } 
+              if (id >= 0) {state.selectedcourses.splice(id,1); };             
+            }
+
+            updateOutcomes();
+          });
+
+          $(".subjectadderbutton").hover( 
+            function () { 
+              //hoverin
+              $(this).css("background", colors[state.school+1]) 
+            }, function () {
+              //hoverout
+              $(this).css("background", colors[6]) 
+          })
+
+                    /*
+                    $(".subjectadderbutton").click( function() {
+                        //add or remove subject
+                      
+                        for (var subject in coursedata.subjects) {
+                          if (coursedata.subjects[subject].school == state.school) {
+                            if (coursedata.subjects[subject].year == state.year) {
+                              if (coursedata.subjects[subject].field == state.field) {
+
+                                if (checkifmajorchosen() == 1) {
+                                    
+                                    state.majorsubjects = state.majorsubjects.filter( function (element) {
+                                      if ((element.field == state.field)&&(element.school == state.school)&&(element.year == state.year)) {
+                                        return 0
+                                      }else {return 1;}
+                                    })
+
+                                } else {
+                                  state.majorsubjects.push(coursedata.subjects[subject])   
+                                }
+
+
+
+                              }
+                            }            
+                          }
+                        }
+
+                        updatemajors(); //draws html/css
+                        updateOutcomes();
+                    })
+
+                    $(".subjectadderbutton")
+            */
+
+
+      /*
+      //DISABLE
+      //accordion subject
+      $("#accordion > li > div").click(function(){
+          if(false == $(this).children().is(':visible')) {
+              $('#accordion > li > ul').slideToggle();
+          }
+          $(this).children('ul').slideToggle();
+      });
+      $('#accordion ul:eq(0)').show();
+      */
 
     }
 
@@ -697,8 +790,8 @@ var updateOutcomes = function () {
     if ((state.outcome > 6) && (state.outcome < 10)) {
       ///show subjects for years
         var subjectsdisplay = []
-          $("#subject").html("").hide()
-          $("#subjectadderbutton").html("").hide()
+          $("#subjectname").html("").hide()
+          $(".subjectadderbutton").html("").hide()
           $("#subjectTextBlock").html("").hide()
 
         for (var subject in coursedata.subjects) {
@@ -715,24 +808,67 @@ var updateOutcomes = function () {
         //sort
 
         //display
+        var courseupdate = "";
         for (var subject in subjectsdisplay) {
-          $("#subject").html(subjectsdisplay[subject].name).fadeIn(250)
-
           
+          courseupdate += '<li><div id="subjectbar">';
           
           if (checkifmajorchosen() == 1) {
-            $("#subjectadderbutton").html("-").show()
+            courseupdate += '<div class="subjectadderbutton">-</div>';
           } else {
             if (state.majorsubjects.length < 3) {
-              $("#subjectadderbutton").html("+").show()  
+              courseupdate += '<div class="subjectadderbutton">+</div>';
             } else {
-              $("#subjectadderbutton").fadeOut(100);
+              $(".subjectadderbutton").fadeOut(100);
             }
             
           }
  
-          $("#subjectTextBlock").html(subjectsdisplay[subject].description).fadeIn(250)  
+          courseupdate += '<div id="subjectname">'+subjectsdisplay[subject].name+'</div></div><p id="subjectTextBlock">'+subjectsdisplay[subject].description+'</p></li>';                  
         }
+        $("#accordion").html(courseupdate)
+
+        $(".subjectadderbutton").click( function() {
+              //add or remove subject
+            
+              for (var subject in coursedata.subjects) {
+                if (coursedata.subjects[subject].school == state.school) {
+                  if (coursedata.subjects[subject].year == state.year) {
+                    if (coursedata.subjects[subject].field == state.field) {
+
+                      if (checkifmajorchosen() == 1) {
+                          
+                          state.majorsubjects = state.majorsubjects.filter( function (element) {
+                            if ((element.field == state.field)&&(element.school == state.school)&&(element.year == state.year)) {
+                              return 0
+                            }else {return 1;}
+                          })
+
+                      } else {
+                        state.majorsubjects.push(coursedata.subjects[subject])   
+                      }
+
+
+
+                    }
+                  }            
+                }
+              }
+
+              updatemajors(); //draws html/css
+              updateOutcomes();
+          })
+
+          $(".subjectadderbutton").hover( 
+            function () { 
+              //hoverin
+              $( ".subjectadderbutton" ).css("background", colors[state.school+1]) 
+            }, function () {
+              //hoverout
+              $( ".subjectadderbutton" ).css("background", colors[6]) 
+          })
+
+
 
         //course layout
         $("#courselayoutmenu").fadeIn(250);
@@ -996,6 +1132,8 @@ $( document ).ready(function() {
     );
 
     //accordion subject
+    /*
+      DISABLE
         $("#accordion > li > div").click(function(){
             if(false == $(this).children().is(':visible')) {
                 $('#accordion > li > ul').slideToggle();
@@ -1003,6 +1141,7 @@ $( document ).ready(function() {
             $(this).children('ul').slideToggle();
         });
         $('#accordion ul:eq(0)').show();
+    */
 
     ////////////////////////////////////////////////////////
     /* FIELDS */
@@ -1206,45 +1345,7 @@ $("#outcomes9").click( function() {
 })
   //////////////////////////////////////////////////////////
 
-$("#subjectadderbutton").click( function() {
-    //add or remove subject
-  
-    for (var subject in coursedata.subjects) {
-      if (coursedata.subjects[subject].school == state.school) {
-        if (coursedata.subjects[subject].year == state.year) {
-          if (coursedata.subjects[subject].field == state.field) {
 
-            if (checkifmajorchosen() == 1) {
-                
-                state.majorsubjects = state.majorsubjects.filter( function (element) {
-                  if ((element.field == state.field)&&(element.school == state.school)&&(element.year == state.year)) {
-                    return 0
-                  }else {return 1;}
-                })
-
-            } else {
-              state.majorsubjects.push(coursedata.subjects[subject])   
-            }
-
-
-
-          }
-        }            
-      }
-    }
-
-    updatemajors(); //draws html/css
-    updateOutcomes();
-})
-
-$("#subjectadderbutton").hover( 
-  function () { 
-    //hoverin
-    $( "#subjectadderbutton" ).css("background", colors[state.school+1]) 
-  }, function () {
-    //hoverout
-    $( "#subjectadderbutton" ).css("background", colors[6]) 
-})
 
 
 

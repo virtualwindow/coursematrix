@@ -519,7 +519,6 @@ schoolbigblocks { overflow: hidden;}
     padding: 0 0 0 0;
 }
 #accordion div {
-    cursor: pointer;
     list-style: none;
     padding: 4px;
     margin: 0 auto;
@@ -529,11 +528,10 @@ schoolbigblocks { overflow: hidden;}
     padding: 0 0 0 0;
 }
 #accordion ul{
-    display: none;
+  
 }
 #accordion ul li {
     font-weight: normal;
-    cursor: auto;
     background-color: #fff;
     padding: 0 0 0 0;
 }
@@ -544,7 +542,7 @@ schoolbigblocks { overflow: hidden;}
     text-decoration: none;
 }
 
-#subject {
+#subjectname {
 	background: #e5e7e9;
 	padding: 4px;
 	color: #404040;
@@ -556,19 +554,9 @@ schoolbigblocks { overflow: hidden;}
 	border-right: 4px solid #fff;
 }
 
-#subject:hover {
-	background: #dadada;
-	padding: 4px;
-	color: #404040;
-	font-family: 'Open Sans';
-	font-weight: 700; 
-	font-size: 12px;
-	height: 20px;
-	margin: 0 auto;
-	border-right: 4px solid #fff;
-}
 
-#subjectadderbutton {
+
+.subjectadderbutton {
 	border-left: 4px solid #fff;
 	float:right;
 	width: 20px;
