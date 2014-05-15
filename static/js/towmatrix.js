@@ -624,55 +624,8 @@ var updateOutcomes = function () {
               $(this).css("background", colors[6]) 
           })
 
-                    /*
-                    $(".subjectadderbutton").click( function() {
-                        //add or remove subject
-                      
-                        for (var subject in coursedata.subjects) {
-                          if (coursedata.subjects[subject].school == state.school) {
-                            if (coursedata.subjects[subject].year == state.year) {
-                              if (coursedata.subjects[subject].field == state.field) {
-
-                                if (checkifmajorchosen() == 1) {
-                                    
-                                    state.majorsubjects = state.majorsubjects.filter( function (element) {
-                                      if ((element.field == state.field)&&(element.school == state.school)&&(element.year == state.year)) {
-                                        return 0
-                                      }else {return 1;}
-                                    })
-
-                                } else {
-                                  state.majorsubjects.push(coursedata.subjects[subject])   
-                                }
-
-
-
-                              }
-                            }            
-                          }
-                        }
-
-                        updatemajors(); //draws html/css
-                        updateOutcomes();
-                    })
-
-                    $(".subjectadderbutton")
-            */
-
-
-      /*
-      //DISABLE
-      //accordion subject
-      $("#accordion > li > div").click(function(){
-          if(false == $(this).children().is(':visible')) {
-              $('#accordion > li > ul').slideToggle();
-          }
-          $(this).children('ul').slideToggle();
-      });
-      $('#accordion ul:eq(0)').show();
-      */
-
     }
+
 
 
     if (state.outcome == 6) {      
@@ -714,6 +667,40 @@ var updateOutcomes = function () {
 
       $("#compulsorysubjectsblock").hide();
       $("#choiceelectivemenu").hide();
+
+      var coresubjects = '';
+      coresubjects +='<h3 id="layoutsubjectsheading">Core Subjects</h3>';
+      coresubjects +='<div class="pure-g-r coresubjectsholder">';
+      coresubjects +='<div id="coresubjectsblock0" class="pure-u-1-2">';
+      coresubjects +='<div class="courselayoutsubjectwrap left coreleft" >';
+      coresubjects +='<h3 class="courselayoutsubjecttitle">Visual Culture</h3>';
+      coresubjects +='<h4 class="courselayoutsubjectcredits">20 credits</h4>';
+      coresubjects +='</div>';
+      coresubjects +='</div>';
+      coresubjects +='<div id="coresubjectsblock1" class="pure-u-1-2">';
+      coresubjects +='<div class="courselayoutsubjectwrap right" >';
+      coresubjects +='<h3 class="courselayoutsubjecttitle">Drawing</h3>';
+      coresubjects +='<h4 class="courselayoutsubjectcredits">20 credits</h4>';
+      coresubjects +='</div>';
+      coresubjects +='</div>';
+      coresubjects +='</div>';
+      coresubjects +='<div class="pure-g-r" style="margin-top: 8px;">';
+      coresubjects +='<div id="coresubjectsblock2" class="pure-u-1-2">';
+      coresubjects +='<div class="courselayoutsubjectwrap left coreleft" >';
+      coresubjects +='<h3 class="courselayoutsubjecttitle">Academic Skills</h3>';
+      coresubjects +='<h4 class="courselayoutsubjectcredits">10 credits</h4>';
+      coresubjects +='</div>';
+      coresubjects +='</div>';
+      coresubjects +='<div id="coresubjectsblock3" class="pure-u-1-2">';
+      coresubjects +='<div class="courselayoutsubjectwrap right" >';
+      coresubjects +='<h3 class="courselayoutsubjecttitle">Art History</h3>';
+      coresubjects +='<h4 class="courselayoutsubjectcredits">10 credits</h4>';
+      coresubjects +='</div>';
+      coresubjects +='</div>';
+      coresubjects +='</div>';
+
+      $("#coresubjectswrapper").html(coresubjects)
+
     }
     
     if (state.year == 2) {
@@ -742,6 +729,18 @@ var updateOutcomes = function () {
 
       $("#choiceelectivemenu").show();
 
+      var coresubjects = '<h3 id="layoutsubjectsheading">Core Subjects</h3>';
+      coresubjects += '<div class="pure-g-r">';
+      coresubjects += '<div id="coresubjectsblock0" class="pure-u-1-1">';
+      coresubjects += '<div class="courselayoutsubjectwrap left coreleft" >'
+      coresubjects += '<h3 class="courselayoutsubjecttitle">Film Theory</h3>';
+      coresubjects += '<h4 class="courselayoutsubjectcredits">20 credits</h4>';
+      coresubjects += '</div>';
+      coresubjects += '</div>';     
+      coresubjects += '</div>';   
+
+      $("#coresubjectswrapper").html(coresubjects)
+
     }
 
     if (state.year == 3) {
@@ -769,11 +768,34 @@ var updateOutcomes = function () {
       $(".courselayoutsubjectwrap").css("padding-top","13px").css("padding-bottom","13px")
 
       $("#choiceelectivemenu").show();
+
+      var coresubjects = '<h3 id="layoutsubjectsheading">Core Subjects</h3>';
+      coresubjects += '<div class="pure-g-r">';
+      coresubjects += '<div id="coresubjectsblock0" class="pure-u-1-1">';
+      coresubjects += '<div class="courselayoutsubjectwrap left coreleft" >'
+      coresubjects += '<h3 class="courselayoutsubjecttitle">Film Theory</h3>';
+      coresubjects += '<h4 class="courselayoutsubjectcredits">20 credits</h4>';
+      coresubjects += '</div>';
+      coresubjects += '</div>';     
+      coresubjects += '</div>';   
+
+      coresubjects += '<div class="pure-g-r" style="margin-top: 8px;">';
+      coresubjects += '<div id="coresubjectsblock2" class="pure-u-1-1">';
+      coresubjects += '<div class="courselayoutsubjectwrap left coreleft" >';
+      coresubjects += '<h3 class="courselayoutsubjecttitle">Research Skills</h3>';
+      coresubjects += '<h4 class="courselayoutsubjectcredits">10 credits</h4>';
+      coresubjects += '</div>';
+      coresubjects += '</div>';      
+      coresubjects += '</div>';
+      $("#coresubjectswrapper").html(coresubjects)
     }
 
     
 
     if ((state.outcome > 6) && (state.outcome < 10)) {
+      $("#majorsubjectsblock #majorsubjectswrapper #layoutsubjectsheading").html("MAJOR SUBJECTS");
+      $("#compulsorysubjectsblock #compulsorysubjectswrapper #layoutsubjectsheading").html("COMPULSORY ELECTIVES");
+      $("#choiceelectivemenu div #courselayoutmenu div #layoutsubjectsheading").html("CHOICE ELECTIVES")
       ///show subjects for years
         var subjectsdisplay = []
           $("#subjectname").html("").hide()
@@ -863,6 +885,80 @@ var updateOutcomes = function () {
         $("#courselayoutmenu").fadeOut(250);
     }
 
+    //ONE YEAR
+    if (state.outcome == 4) {        
+      $("#courselayoutmenu").fadeIn(250);
+      $("#outcomes7").css("background", colors[0])
+      $("#outcomes8").css("background", colors[state.school+1]) 
+      $("#outcomes9").css("background", colors[0])   
+      $("#courselayoutleftcontentyear").html(1).show()
+      $("#courselayoutleftcontenttitle").html("Year Programme").show()
+
+      $("#coresubjectsblock").removeClass("pure-u-1-3").addClass("pure-u-1-6")
+      $("#coresubjectsblock0").removeClass("pure-u-1-2").addClass("pure-u-1-1")
+      $("#coresubjectsblock1").hide()
+      $("#coresubjectsblock2").removeClass("pure-u-1-2").addClass("pure-u-1-1")
+      $("#coresubjectsblock3").hide()
+
+      $(".coreleft").removeClass("left");
+
+      $("#majorsubjectsblock").removeClass("pure-u-1-3").addClass("pure-u-1-6")
+      $(".majorsubjectsblocks").removeClass("pure-u-1-2").addClass("pure-u-1-1")
+      $("#subjectblock0").removeClass("left")
+      $("#subjectblock1").removeClass("right").css("margin-top", "8px")
+      $("#subjectblock2").removeClass("left").hide();
+
+      $("#compulsorysubjectsblock").show();
+      $(".courselayoutsubjectwrap").css("padding-top","13px").css("padding-bottom","13px")
+
+      $("#choiceelectivemenu").show();  
+
+      $("#majorsubjectsblock #majorsubjectswrapper #layoutsubjectsheading").html("SLP COMBO");
+      $("#compulsorysubjectsblock #compulsorysubjectswrapper #layoutsubjectsheading").html("SHORT-COURSES");
+      $("#choiceelectivemenu div #courselayoutmenu div #layoutsubjectsheading").html("CHOICE SLP")
+
+      var coresubjects = '<h3 id="layoutsubjectsheading">Core Subjects</h3>';
+      if (state.school == 1) {
+        coresubjects += '<div class="pure-g-r">';
+          coresubjects += '<div id="coresubjectsblock0" class="pure-u-1-1">';
+          coresubjects += '<div class="courselayoutsubjectwrap left coreleft" >'
+          coresubjects += '<h3 class="courselayoutsubjecttitle">Film Theory</h3>';
+          coresubjects += '<h4 class="courselayoutsubjectcredits">10 credits</h4>';
+          coresubjects += '</div>';
+          coresubjects += '</div>';     
+        coresubjects += '</div>';
+
+        coresubjects += '<div class="pure-g-r" style="margin-top: 8px;">';
+          coresubjects += '<div id="coresubjectsblock2" class="pure-u-1-1">';
+          coresubjects += '<div class="courselayoutsubjectwrap left coreleft" >';
+          coresubjects += '<h3 class="courselayoutsubjecttitle">Story &amp; Ritual</h3>';
+          coresubjects += '<h4 class="courselayoutsubjectcredits">10 credits</h4>';
+          coresubjects += '</div>';
+          coresubjects += '</div>';      
+        coresubjects += '</div>';
+
+        coresubjects += '<div class="pure-g-r" style="margin-top: 8px;">';
+          coresubjects += '<div id="coresubjectsblock2" class="pure-u-1-1">';
+          coresubjects += '<div class="courselayoutsubjectwrap left coreleft" >';
+          coresubjects += '<h3 class="courselayoutsubjecttitle">Media Aesthetics</h3>';
+          coresubjects += '<h4 class="courselayoutsubjectcredits">10 credits</h4>';
+          coresubjects += '</div>';
+          coresubjects += '</div>';      
+        coresubjects += '</div>';
+      } else {
+        coresubjects += '<div class="pure-g-r">';
+          coresubjects += '<div id="coresubjectsblock0" class="pure-u-1-1">';
+          coresubjects += '<div class="courselayoutsubjectwrap left coreleft" >'
+          coresubjects += '<h3 class="courselayoutsubjecttitle">Portfolio</h3>';
+          coresubjects += '<h4 class="courselayoutsubjectcredits">60 credits</h4>';
+          coresubjects += '</div>';
+          coresubjects += '</div>';     
+        coresubjects += '</div>';       
+      }
+
+      $("#coresubjectswrapper").html(coresubjects)
+
+    }
 
 }
     
