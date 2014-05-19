@@ -67,7 +67,7 @@ div#matrixBigFA12:hover {  border-bottom: 5px solid #333; }
 div#matrixBigIA12:hover {  border-bottom: 5px solid #333; }
 
 #matrixBigCS {
-	background: #947db6;
+	background: #50b297;
 	margin-left: 4px;	
 	margin-right: 4px;	
 	border-bottom: 5px solid #fff;
@@ -76,7 +76,7 @@ div#matrixBigIA12:hover {  border-bottom: 5px solid #333; }
 div#matrixBigCS12:hover {  border-bottom: 5px solid #333; }
 
 #matrixBigVA {
-	background: #50b297;
+	background: #947db6;
 	margin-left: 4px;	
 	border-bottom: 5px solid #fff;
 }
@@ -607,13 +607,13 @@ schoolbigblocks { overflow: hidden;}
 	white-space:nowrap;
 }
 
-.carreerwrapper {
+.careerwrapper {
 	color: #f00;
 	font-size: 18px; 
 	margin-top:16px;
 }
 
-.carreer {
+.career {
 	margin-left: 16px;
 	margin-top: -5px;
 
@@ -623,7 +623,7 @@ schoolbigblocks { overflow: hidden;}
 	font-family: 'Open Sans';
 }
 
-.carreer span {
+.career span {
 	color: #000;
 	font-weight: 700; 
 }
