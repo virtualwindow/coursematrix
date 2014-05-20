@@ -2,7 +2,6 @@ var schoolblock1slidessequence=["/slides/ds0.jpg", "/slides/ds1.jpg" ];
 var schoolblock2slidessequence=["/slides/fa0.jpg", "/slides/fa1.jpg" ];
 var schoolblock3slidessequence=["/slides/ia0.jpg", "/slides/ia1.jpg" ];
 var schoolblock4slidessequence=["/slides/va0.jpg", "/slides/va1.jpg" ];
-var schoolblock5slidessequence=["/slides/bs0.jpg", "/slides/bs1.jpg" ];
 
 var schoolblock1slidestoggle=0;
 var schoolblock2slidestoggle=0;
@@ -33,7 +32,7 @@ function schoolblock1slides()
     $("#schoolblock1demo" + schoolblock1slidestoggle).height(h)
     $("#schoolblock1text").width(w)
     $("#schoolblock1text").height(h)   
-    $("#schoolblock1demo" + schoolblock1slidestoggle).fadeIn(500,function(){window.setTimeout(schoolblock1slides,3000);});
+    $("#schoolblock1demo" + schoolblock1slidestoggle).fadeIn(500,function(){window.setTimeout(schoolblock1slides,5000);});
     schoolblock1slidestoggle^=1;
     $("#schoolblock1demo" + schoolblock1slidestoggle).fadeOut(1000);
   }
@@ -51,7 +50,7 @@ function schoolblock2slides()
     $("#schoolblock2demo" + schoolblock2slidestoggle).height(h)
     $("#schoolblock2text").width(w)
     $("#schoolblock2text").height(h)   
-    $("#schoolblock2demo" + schoolblock2slidestoggle).fadeIn(500,function(){window.setTimeout(schoolblock2slides,3000);});
+    $("#schoolblock2demo" + schoolblock2slidestoggle).fadeIn(500,function(){window.setTimeout(schoolblock2slides,5000);});
     schoolblock2slidestoggle^=1;
     $("#schoolblock2demo" + schoolblock2slidestoggle).fadeOut(1000);
   }
@@ -69,7 +68,7 @@ function schoolblock3slides()
     $("#schoolblock3demo" + schoolblock3slidestoggle).height(h)
     $("#schoolblock3text").width(w)
     $("#schoolblock3text").height(h)   
-    $("#schoolblock3demo" + schoolblock3slidestoggle).fadeIn(500,function(){window.setTimeout(schoolblock3slides,3000);});
+    $("#schoolblock3demo" + schoolblock3slidestoggle).fadeIn(500,function(){window.setTimeout(schoolblock3slides,5000);});
     schoolblock3slidestoggle^=1;
     $("#schoolblock3demo" + schoolblock3slidestoggle).fadeOut(1000);
   }
@@ -87,27 +86,9 @@ function schoolblock4slides()
     $("#schoolblock4demo" + schoolblock4slidestoggle).height(h)
     $("#schoolblock4text").width(w)
     $("#schoolblock4text").height(h)   
-    $("#schoolblock4demo" + schoolblock4slidestoggle).fadeIn(500,function(){window.setTimeout(schoolblock4slides,3000);});
+    $("#schoolblock4demo" + schoolblock4slidestoggle).fadeIn(500,function(){window.setTimeout(schoolblock4slides,5000);});
     schoolblock4slidestoggle^=1;
     $("#schoolblock4demo" + schoolblock4slidestoggle).fadeOut(1000);
-  }
-  //$("#debug").html("#demo0=" + $("#demo0").css('background-image')+"</br>"+"#demo1=" + $("#demo1").css('background-image')+"</br>Current div:#demo"+schoolblock1slidestoggle);
-}
-
-function schoolblock5slides()
-{
-  if (schoolblock5slidesEnabled == 1) {
-    schoolblock5slidesi=(schoolblock5slidesi>=schoolblock5slidessequence.length-1)?0:(schoolblock5slidesi+1);
-    $("#schoolblock5demo" + schoolblock5slidestoggle).css('background-image', 'url(' + schoolblock5slidessequence[schoolblock5slidesi] + ')');
-    var w = $("#schoolblock5").width();
-    var h = $("#schoolblock5").height();
-    $("#schoolblock5demo" + schoolblock5slidestoggle).width(w)
-    $("#schoolblock5demo" + schoolblock5slidestoggle).height(h)
-    $("#schoolblock5text").width(w) 
-    $("#schoolblock5text").height(h)   
-    $("#schoolblock5demo" + schoolblock5slidestoggle).fadeIn(500,function(){window.setTimeout(schoolblock5slides,3000);});
-    schoolblock5slidestoggle^=1;
-    $("#schoolblock5demo" + schoolblock5slidestoggle).fadeOut(1000);
   }
   //$("#debug").html("#demo0=" + $("#demo0").css('background-image')+"</br>"+"#demo1=" + $("#demo1").css('background-image')+"</br>Current div:#demo"+schoolblock1slidestoggle);
 }
@@ -130,35 +111,31 @@ var coursedata = {
     "Film Arts", 
     "Interactive Arts",
     "Visual Arts", 
-    "Culture Studies"],
+    ],
   schoolsfirst : [
     "Design", 
     "Film", 
     "Interactive", 
-    "Visual",
-    "Culture" 
+    "Visual",     
     ],
   schoolssecond : [
     "Studies", 
     "Arts", 
     "Arts",
     "Arts", 
-    "Studies" 
     ],
   schoolstext : [
     "With a firm focus on the social and cultural consumption of communication, the department offers subjects such as Communication Design, Illustration and Photography, which foster the art of persuasion through visual imagery.", 
     "The audio-visual industries are the fastest growing sector of the visual arts worldwide. Film and animation is now at the heart of every mass communication medium. <br><br>In FILM ARTS we explore possibilities of expression through the media of Film, 3D Animation, Motion Graphics, Sound and Game Design. <br></br>Students are initiated into industry standard software and technical training relevant to their field of specialisation. More importantly, however, is the emphasis placed on innovative audio-visual decision-making that has come to define The Open Window Film Arts graduate in the work field, both locally and abroad.", 
     "Interactive digital technologies affect our lives in numerous ways. Interaction Design is a comparatively new discipline concerned with designing strategic, human-centered solutions that shape the usefulness and experience of interacting with these technologies. <br></br>Interaction Design deals with both form and behavior as it employs a multidisciplinary approach to design solutions that align with business, social and cultural contexts.", 
     "In Development",
-    "Culture Studies text block" 
     ],    
   fields : [
       ["Communication Design","Illustration","Photography"],
       ["3D Animation", "Film & Television", "Game Design", "Motion Design", "Production Design", "Screen Acting", "Screenwriting", "Sound Design"],
-      ["Interactive Design", "Multimedia Programming", "3D-Design"],
+      ["Interactive Design", "Programming", "3D-Design"],
       ["Field 1", "Field 2", "Field 3", "Field 4", "Field 5"],
-      ["Business", "Culture"]
-    ],
+      ],
   fieldstext : [
       ["Communication Design provides the basis for a career in the graphic and print design industry - covering typography, advertising and packaging to name but a few. Thie subject is a must for anyone intersted in graphic design.",
       "Illustration focuses on clarifying concepts through visual imagery. The subject deals with creating graphic, visual representations that convey factual and sensory information on a particular idea or concept. Students are given market-related, relevant and thought-provoking illustration briefs within both print-based and digital platforms. They are encouraged to use a wide variety of traditional and digital techniques, materials and media to develop a unique, personal visual language. Basic aspects of illustration-based editorial design, typography and printing are also covered.",
@@ -175,8 +152,6 @@ var coursedata = {
       "Field 3 description", 
       "Field 4 description", 
       "Field 5 description"],
-      ["Business field description", 
-      "Culture field description"]
 
 ],
     courselist: [
@@ -488,6 +463,7 @@ var coursedata = {
       { year: 1, school: 1, field: 7, name: "Sound Design 101", description: "The Sound Design 101 course is aimed at creating a well-rooted foundation and understanding of the principals of sound and digital audio. The students will be taught how to communicate in sound, principles and practice of capturing sound as well as the theory of digital audio. Students will also be introduced to the concept of a Digital Audio Workstation (DAW), and the student will learn the functionality of the DAW and how to record, edit and process audio for a broad range of applications.", credits: 20},
       { year: 2, school: 1, field: 7, name: "Sound Design 201", description: "The Sound Design 201 course introduces the learner to advanced recording and mixing techniques. It aims at equipping the student with the necessary tools and knowledge to practically record, mix and create sound design for film and radio. Focus is placed on music technology as well as equipping the student with a basic understanding of music theory in order to explore virtual instruments inside the DAW. The student will be exposed to the world of sound creation, Digital Audio Workstations, advanced recording, re-recording and synthesis. Focus will be placed on quality of audio, format of audio, and sound design as the core principles. The course will extend the interfacing between the digital and analogue realms. Students will be taught how to interface real world objects into the systems they use.", credits: 50},
       { year: 3, school: 1, field: 7, name: "Sound Design 301", description: "Sound Design 301 explores the science behind acoustics for recording, mixing and sound stage. Students are also introduced to producing, arranging and scoring in the sound design environment. Students will be taught the concepts behind final mix and mastering of audio for film, television, CD, internet and radio and they will explore the standards and formats for audio delivery in the industry. Surround mixing will be introduced.", credits: 50},
+      
       { year: 1, school: 2, field: 0, name: "Interactive Media Design 101", description: "This foundation level subject provides the groundwork for interactive design and development studies, through investigating multimedia-based communication technologies and design for interactive digital environments. Theories and skills are presented in themes and include communication technology basics, design foundation, corporate/brand identity design, and interactive design fundamentals.", credits: 20},
       { year: 2, school: 2, field: 0, name: "Interactive Media Design 201", description: "On second year level, students learn to provide strategic design solutions for interactive digital media. Themes like interface design, responsive Web design, social media design and strategy provide the building blocks for executing extensive brand communication through Web-based or “online” media.", credits: 50},
       { year: 3, school: 2, field: 0, name: "Interactive Media Design 301", description: "On third-year level, emphasis is placed on strong conceptual thinking and executing strategic design solutions in new and emerging media formats such as smart phones, tablets and touch-screen environments. Students learn to apply technology appropriately and maintain brand integrity as they produce brand communication through a range of digital interactive mediums. Design solutions are shaped to be exceedingly functional and provide an optimal user experience. ", credits: 50},           
@@ -524,7 +500,7 @@ var colors = ["#404040", "#f8b227", "#2a98d3", "#ee561d", "#917ab1", "#4ead92", 
 var state = {
   school : -1,
   field: -1,
-  outcome: -1,
+  outcome: -2, //workaround to display course structure title
   year: -1,
   majorsubjects: [],
   selectedcourses: [],
@@ -537,7 +513,7 @@ var updateScreen = function () {
 
   for (var field in coursedata.fields[state.school]) {
     $("#field"+field+"text").html(coursedata.fields[state.school][field])  
-    $("#field"+field).delay(field*100).fadeIn(500);  
+    $("#field"+field).delay(field*50).fadeIn(100);  
   }
 
   $("#structureFieldTitleArrow").css("color", colors[state.school+1])
@@ -571,7 +547,7 @@ var updateFields = function () {
   if (state.field != -1) {
     $("#structureFieldTitle").show();    
     $("#structureFieldText" ).hide().html(coursedata.fields[state.school][state.field]).fadeIn(250)    
-    $("#structureTextBlockTop").html(coursedata.fieldstext[state.school][state.field]).fadeIn(350)
+    $("#structureTextBlockTop").html(coursedata.fieldstext[state.school][state.field]).fadeIn(250)
   }
 
   for (var a =0; a < 10; a++) {
@@ -625,7 +601,9 @@ var checkifmajorchosen = function () {
 }
 
 var updateOutcomes = function () {
-    for (var a = 0; a < 10; a++) {
+    $("#accordion").html(""); //always clears accordian on refresh
+
+    for (var a = -1; a < 10; a++) {
       if (a == state.outcome) {
         $("#outcomes"+a).css("border-left", "8px "+colors[state.school+1]+" solid")
         $("#outcome"+a+"heading").fadeIn(250)
@@ -639,20 +617,19 @@ var updateOutcomes = function () {
 
 
     if ((state.outcome > 5) && (state.outcome < 10)) {
+      //degree left border highlight
       $("#outcomes6").css("border-left", "8px "+colors[state.school+1]+" solid")
     }
 
     if (state.outcome < 6) {
+      //hides degree years
       $("#outcomes7").delay(200).fadeOut(250);
       $("#outcomes8").delay(100).fadeOut(250);      
       $("#outcomes9").delay(0).fadeOut(250);
     }
 
-
-    if (state.outcome == 0) {
-      //careers
-      $(".careerwrapper").css("color", colors[state.school+1])
-    }
+    //CARREERS
+    if (state.outcome == 0) { $(".careerwrapper").css("color", colors[state.school+1]); }
 
 
     if ((state.outcome == 1)||(state.outcome == 2)||(state.outcome == 3)) {      
@@ -693,12 +670,18 @@ var updateOutcomes = function () {
 
           $(".subjectadderbutton").click( function () {
             if ($(this).data("mode") == "add") 
-            {
+            { 
+              var added = 0;
               for (course in coursedata.courselist) 
               {
-                if ($(this).data("name") == coursedata.courselist[course].name) {
-                  state.selectedcourses.push(coursedata.courselist[course])    
-                }  
+                if (added == 0) { //to keep multiple adds from happening
+                  if ($(this).data("name") == coursedata.courselist[course].name) 
+                  {
+                    state.selectedcourses.push(coursedata.courselist[course]);
+                    added += 1;
+                  }    
+                }
+                
               }              
             }
 
@@ -716,7 +699,7 @@ var updateOutcomes = function () {
               if (id >= 0) {state.selectedcourses.splice(id,1); };             
             }
 
-            updateOutcomes();
+            updateOutcomes();            
           });
 
           $(".subjectadderbutton").hover( 
@@ -1063,7 +1046,7 @@ var updateOutcomes = function () {
       $("#coresubjectswrapper").html(coresubjects)
 
     }
-
+    $(".coursemenu > div").css("height", $(".structureContent").height());  //fixes height bug
 }
     
 $( document ).ready(function() {
@@ -1071,11 +1054,14 @@ $( document ).ready(function() {
     updateOutcomes();
     $("#choiceelectivemenu").hide()
     $("#courselayoutmenu").hide()
+
     $("#schoolblock1text").hide()
     $("#schoolblock2text").hide()
     $("#schoolblock3text").hide()
     $("#schoolblock4text").hide()
-    $("#schoolblock5text").hide()
+
+
+
     $(".fieldheading").hide()
     $(".fieldsmenu").hide()    
     $(".outcomesheading").hide()
@@ -1084,17 +1070,14 @@ $( document ).ready(function() {
     $(".courseheading").hide()
     $(".coursemenu").hide()
 
-    $("#matrixBigDS").hide()
-    $("#matrixBigFA").hide()
-    $("#matrixBigIA").hide()
-    $("#matrixBigCS").hide()
-    $("#matrixBigVA").hide()
-    //$(".schoolbigblocks").hide()
-    $("#matrixBigDS").delay(0).fadeIn(500);
-    $("#matrixBigFA").delay(250).fadeIn(500);
-    $("#matrixBigIA").delay(500).fadeIn(500);
-    $("#matrixBigCS").delay(750).fadeIn(500);
-    $("#matrixBigVA").delay(1000).fadeIn(500);
+    
+
+
+    
+
+
+
+
     $(".fields:hover").css("background", "#f00")
 
     $("#outcomes7").hide();
@@ -1105,7 +1088,7 @@ $( document ).ready(function() {
     schoolblock2slides();
     schoolblock3slides();
     schoolblock4slides();
-    schoolblock5slides();
+
 
     
     //$(".schoolbigblocks").delay(1000).fadeIn(1000);
@@ -1113,16 +1096,15 @@ $( document ).ready(function() {
       $( "#matrixBigDS" ).css( 'border-bottom','5px solid #333' );
       $( "#matrixBigFA" ).css( 'border-bottom','5px solid #fff' );      
       $( "#matrixBigIA" ).css( 'border-bottom','5px solid #fff' );
-      $( "#matrixBigCS" ).css( 'border-bottom','5px solid #fff' );
       $( "#matrixBigVA" ).css( 'border-bottom','5px solid #fff' );
       $( ".schoolbigblocks" ).css('display','none')      
       schoolblock1slidesEnabled = 0;
       schoolblock2slidesEnabled = 0;
       schoolblock3slidesEnabled = 0;
       schoolblock4slidesEnabled = 0;
-      schoolblock5slidesEnabled = 0;
       state.school = 0  //DESIGN STUDIES
       state.field = -1;
+      state.outcome = -1;
       updateScreen();
       showrest();
     })
@@ -1131,16 +1113,15 @@ $( document ).ready(function() {
       $( "#matrixBigDS" ).css( 'border-bottom','5px solid #fff' );
       $( "#matrixBigFA" ).css( 'border-bottom','5px solid #333' );      
       $( "#matrixBigIA" ).css( 'border-bottom','5px solid #fff' );
-      $( "#matrixBigCS" ).css( 'border-bottom','5px solid #fff' );
       $( "#matrixBigVA" ).css( 'border-bottom','5px solid #fff' );
       $( ".schoolbigblocks" ).css('display','none')
       schoolblock1slidesEnabled = 0;
       schoolblock2slidesEnabled = 0;
       schoolblock3slidesEnabled = 0;
       schoolblock4slidesEnabled = 0;
-      schoolblock5slidesEnabled = 0;
       state.school = 1;  //FILM ARTS
       state.field = -1;
+      state.outcome = -1;
       updateScreen();      
       showrest();
     })
@@ -1149,55 +1130,37 @@ $( document ).ready(function() {
       $( "#matrixBigDS" ).css( 'border-bottom','5px solid #fff' );
       $( "#matrixBigFA" ).css( 'border-bottom','5px solid #fff' );
       $( "#matrixBigIA" ).css( 'border-bottom','5px solid #333' );
-      $( "#matrixBigCS" ).css( 'border-bottom','5px solid #fff' );
       $( "#matrixBigVA" ).css( 'border-bottom','5px solid #fff' );
       $( ".schoolbigblocks" ).css('display','none');
       schoolblock1slidesEnabled = 0;
       schoolblock2slidesEnabled = 0;
       schoolblock3slidesEnabled = 0;
       schoolblock4slidesEnabled = 0;
-      schoolblock5slidesEnabled = 0;
       state.school = 2  //DESIGN STUDIES
       state.field = -1;
+      state.outcome = -1;
       updateScreen();      
       showrest();
     })
-
-    $( "#matrixBigCS" ).click( function() {
-      $( "#matrixBigDS" ).css( 'border-bottom','5px solid #fff' );
-      $( "#matrixBigFA" ).css( 'border-bottom','5px solid #fff' );
-      $( "#matrixBigIA" ).css( 'border-bottom','5px solid #fff' );
-      $( "#matrixBigCS" ).css( 'border-bottom','5px solid #333' );
-      $( "#matrixBigVA" ).css( 'border-bottom','5px solid #fff' );
-      $( ".schoolbigblocks" ).css('display','none');
-      schoolblock1slidesEnabled = 0;
-      schoolblock2slidesEnabled = 0;
-      schoolblock3slidesEnabled = 0;
-      schoolblock4slidesEnabled = 0;
-      schoolblock5slidesEnabled = 0;
-      state.school = 3  //DESIGN STUDIES
-      state.field = -1;
-      updateScreen();      
-      showrest();
-    })    
 
     $( "#matrixBigVA" ).click( function() {
       $( "#matrixBigDS" ).css( 'border-bottom','5px solid #fff' );
       $( "#matrixBigFA" ).css( 'border-bottom','5px solid #fff' );
       $( "#matrixBigIA" ).css( 'border-bottom','5px solid #fff' );
-      $( "#matrixBigCS" ).css( 'border-bottom','5px solid #fff' );
       $( "#matrixBigVA" ).css( 'border-bottom','5px solid #333' );
       $( ".schoolbigblocks" ).css('display','none');
       schoolblock1slidesEnabled = 0;
       schoolblock2slidesEnabled = 0;
       schoolblock3slidesEnabled = 0;
       schoolblock4slidesEnabled = 0;
-      schoolblock5slidesEnabled = 0;
-      state.school = 4  //DESIGN STUDIES
+      state.school = 3  //VISUAL ARTS
       state.field = -1;
+      state.outcome = -1;
       updateScreen();      
       showrest();
-    }) 
+    })    
+
+
 
     $( "#matrixBigDS" ).hover(
       function() {
@@ -1269,7 +1232,7 @@ $( document ).ready(function() {
       }
     );
 
-    $( "#matrixBigCS" ).hover(
+    $( "#matrixBigVA" ).hover(
       function() {
         if (state.school == -1) {
           $( ".schoolbigblocks" ).fadeIn(500);
@@ -1292,30 +1255,7 @@ $( document ).ready(function() {
       }
     );
 
-    $( "#matrixBigVA" ).hover(
-      function() {
-        if (state.school == -1) {
-          $( ".schoolbigblocks" ).fadeIn(500);
-        }
-        $("#schoolblock5text").fadeIn(500)
-        schoolblock5slidesEnabled = 0;
-        $("#schoolblock5demo0").fadeOut(500);
-        $("#schoolblock5demo1").fadeOut(500);
-        $("#schoolblock1text").width($("#schoolblock1").width());
-        $("#schoolblock2text").width($("#schoolblock2").width());
-        $("#schoolblock3text").width($("#schoolblock3").width());
-        $("#schoolblock4text").width($("#schoolblock4").width());
-        $("#schoolblock5text").width($("#schoolblock5").width());          
-      }, function() {      
-        $("#schoolblock5text").fadeOut(500)
-        
-        if (state.school == -1) {
-          schoolblock5slidesEnabled = 1;
-        }        
-        
-        schoolblock5slides();
-      }
-    );
+    
 
     //accordion subject
     /*
