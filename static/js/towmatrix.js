@@ -524,7 +524,7 @@ var updateScreen = function () {
   if (state.field == -1) {
       $("#structureFieldTitle").hide();
       $("#structureTextBlockTop").html(coursedata.schoolstext[state.school])
-      $("#subjectname").hide();
+      $(".subjectname").hide();
       $(".subjectadderbutton").html("").hide()
 
       $("#subjectTextBlock").hide();  
@@ -649,19 +649,21 @@ var updateOutcomes = function () {
               
               
               if (haveselected == false) {
-                subjectlist += '<li><div id="subjectbar"><div class="subjectadderbutton"';
+                subjectlist += '<li id="accordian'+course+'"><div class="subjectbar" data-number="'+course+'"><div class="subjectadderbutton"';
                 subjectlist += 'data-mode="add" data-name="'+coursedata.courselist[course].name+'">+</div>';  
-                subjectlist += '<div id="subjectname">'+coursedata.courselist[course].name+'</div></div>';
+                subjectlist += '<div class="subjectname">'+coursedata.courselist[course].name+'</div></div>';
+                subjectlist += '<p id="subjectTextBlock" style="display: none;">'+coursedata.courselist[course].description+'</p></li>';                  
               } 
               
               if (haveselected == true) {
-                subjectlist += '<li><div id="subjectbar" ><div class="subjectadderbutton"';
+                subjectlist += '<li id="accordian'+course+'"><div id="subjectbar" data-number="'+course+'"><div class="subjectadderbutton"';
                 subjectlist += 'data-mode="remove" data-name="'+coursedata.courselist[course].name+'">-</div>';  
-                subjectlist += '<div id="subjectname" style="background: '+colors[state.school+1]+';">'+coursedata.courselist[course].name+'</div></div>';
+                subjectlist += '<div class="subjectname" style="background: '+colors[state.school+1]+'; cursor: pointer;">'+coursedata.courselist[course].name+'</div></div>';
+                subjectlist += '<p id="subjectTextBlock" >'+coursedata.courselist[course].description+'</p></li>';   
               }
 
               
-              subjectlist += '<p id="subjectTextBlock">'+coursedata.courselist[course].description+'</p></li>';                  
+                             
             }  
             
           }
@@ -702,6 +704,8 @@ var updateOutcomes = function () {
             updateOutcomes();            
           });
 
+          
+
           $(".subjectadderbutton").hover( 
             function () { 
               //hoverin
@@ -710,6 +714,16 @@ var updateOutcomes = function () {
               //hoverout
               $(this).css("background", colors[6]) 
           })
+
+
+          // NEW ACCORDION
+          $("#accordion > li").click( function() {
+              $(this).children("p#subjectTextBlock").slideToggle("fast") //.show();
+              $(this).parent().find("p#subjectTextBlock").not($(this).children("p#subjectTextBlock")).slideUp("fast") //.hide();              
+          })
+
+
+   
 
     }
 
@@ -885,7 +899,7 @@ var updateOutcomes = function () {
       $("#choiceelectivemenu div #courselayoutmenu div #layoutsubjectsheading").html("CHOICE ELECTIVES")
       ///show subjects for years
         var subjectsdisplay = []
-          $("#subjectname").html("").hide()
+          $(".subjectname").html("").hide()
           $(".subjectadderbutton").html("").hide()
           $("#subjectTextBlock").html("").hide()
 
@@ -919,7 +933,7 @@ var updateOutcomes = function () {
             
           }
  
-          courseupdate += '<div id="subjectname">'+subjectsdisplay[subject].name+'</div></div><p id="subjectTextBlock">'+subjectsdisplay[subject].description+'</p></li>';                  
+          courseupdate += '<div class="subjectname">'+subjectsdisplay[subject].name+'</div></div><p id="subjectTextBlock">'+subjectsdisplay[subject].description+'</p></li>';                  
         }
         $("#accordion").html(courseupdate)
 

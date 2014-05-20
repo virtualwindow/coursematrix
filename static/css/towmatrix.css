@@ -542,7 +542,13 @@ schoolbigblocks { overflow: hidden;}
     text-decoration: none;
 }
 
-#subjectname {
+
+
+.subjectbar {
+	cursor: pointer;
+}
+
+.subjectname {
 	background: #e5e7e9;
 	padding: 4px;
 	color: #404040;
