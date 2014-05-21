@@ -800,8 +800,28 @@ var updateOutcomes = function () {
 
           // NEW ACCORDION
           $("#accordion > li").click( function() {
-              $(this).children("p#subjectTextBlock").slideToggle("fast") //.show();
-              $(this).parent().find("p#subjectTextBlock").not($(this).children("p#subjectTextBlock")).slideUp("fast") //.hide();              
+              
+          
+               if (state.outcome != 4) {              
+                  //smooth but buggy 
+                  $(this).children("p#subjectTextBlock").slideToggle("fast", function() {
+                    $(".coursemenu > div").css("height", $(".structureContent").height());
+                  }) //.show();
+
+                  $(this).parent().find("p#subjectTextBlock").not($(this).children("p#subjectTextBlock")).slideUp("fast", function () {
+                    $(".coursemenu > div").css("height", $(".structureContent").height());
+                  }) //.hide();        
+                 
+               } else {
+                    $(this).children("p#subjectTextBlock").fadeIn(100, function() {});
+                    $(this).parent().find("p#subjectTextBlock").not($(this).children("p#subjectTextBlock")).fadeOut(150, function() {
+                      $(".coursemenu > div").css("height", $(".structureContent").height());                         
+                    });
+                  
+               }
+            
+
+
           })
 
 
