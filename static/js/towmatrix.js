@@ -310,33 +310,33 @@ var coursedata = {
      {outcome:2,school:3,field:4,name:"SLPeVisual Arts 3", description:"In development."},
 
     //Professional Skills    
-     {outcome:3,school:0,field:0,name:"Copywriting", description:"Copywriting equips students to write for various media platforms for the purpose of advertising or marketing. The main aim of the copy is to persuade the addressee (reader, listener) to buy into an advertised product or to subscribe to a certain viewpoint that the text shares."},
-     {outcome:3,school:0,field:0,name:"Digital Publishing", description:"Digital Publishing aims to emulate traditional printing media on modern digital mediums such as tablets and phones. Rather than a traditional printed page consisting of text and imagery, digital publishing provides the viewer with a greater sense of interactivity in the form of animations, video and sound. "},
-     {outcome:3,school:0,field:0,name:"Advanced Printing Practice", description:"Advanced Printing Practice is geared to equip students with the necessary tools to be able to create documents for print. The printing process will be explored in depth in relation to the various forms of commercial printing. The evolution of print and its various incarnations through the ages will also be discussed."},
-     {outcome:3,school:0,field:0,name:"Concept Development", description:"The main aim of the concept development course is to build a solid understanding of the creative process and the associated thinking skills that can be used to generate and implement ideas and concepts.  The course aims to strengthen student ideas, visualisation and thinking abilities by promoting curiosity, knowledge building and exploration. The course also seeks to teach students to draw inspiration from various sources using key thinking techniques"},
-     {outcome:3,school:0,field:0,name:"Motion Design For Designers", description:"This course is geared to introducing design students to the workflow of Adobe After Effects. At the end of this module, students will have the necessary skills to create a functional logo animation as well as have insight to basic animation fundamentals."},
-     {outcome:3,school:0,field:0,name:"DPS Tools for Web", description:"The objective of this course is to familiarise design students with some of the latest tools in the Adobe offering such as Muse and Edge. Students will be able to create a functional HTML 5 website. The course will also cover basic web fundamentals such as grids and responsive design."},
+     {outcome:3,school:0,field:0,compulsory:2, name:"Copywriting", description:"Copywriting equips students to write for various media platforms for the purpose of advertising or marketing. The main aim of the copy is to persuade the addressee (reader, listener) to buy into an advertised product or to subscribe to a certain viewpoint that the text shares."},
+     {outcome:3,school:0,field:0,compulsory:2, name:"Digital Publishing", description:"Digital Publishing aims to emulate traditional printing media on modern digital mediums such as tablets and phones. Rather than a traditional printed page consisting of text and imagery, digital publishing provides the viewer with a greater sense of interactivity in the form of animations, video and sound. "},
+     {outcome:3,school:0,field:0,compulsory:3, name:"Advanced Printing Practice", description:"Advanced Printing Practice is geared to equip students with the necessary tools to be able to create documents for print. The printing process will be explored in depth in relation to the various forms of commercial printing. The evolution of print and its various incarnations through the ages will also be discussed."},
+     {outcome:3,school:0,field:0,compulsory:2, name:"Concept Development", description:"The main aim of the concept development course is to build a solid understanding of the creative process and the associated thinking skills that can be used to generate and implement ideas and concepts.  The course aims to strengthen student ideas, visualisation and thinking abilities by promoting curiosity, knowledge building and exploration. The course also seeks to teach students to draw inspiration from various sources using key thinking techniques"},
+     {outcome:3,school:0,field:0,compulsory:3, name:"Motion Design For Designers", description:"This course is geared to introducing design students to the workflow of Adobe After Effects. At the end of this module, students will have the necessary skills to create a functional logo animation as well as have insight to basic animation fundamentals."},
+     {outcome:3,school:0,field:0,compulsory:2,name:"DPS Tools for Web", description:"The objective of this course is to familiarise design students with some of the latest tools in the Adobe offering such as Muse and Edge. Students will be able to create a functional HTML 5 website. The course will also cover basic web fundamentals such as grids and responsive design."},
      {outcome:3,school:0,field:1,name:"Printmaking", description:"Traditional Illustration Techniques introduces students to a few fundamental printmaking techniques such as monotype, etching and Marley tile. The students become familiarized with various printmaking skills and thus obtain a general understanding of printmaking processes."},
      {outcome:3,school:0,field:1,name:"Experimental Illustration", description:"This elective explores unconventional modes of mark making which may be introduced into an image making process. The elective investigates a specific theme by employing 5 different non-conventional approaches in order to arrive at a unique execution of a theme. These non-traditional approaches are then compiled into a booklet, which shows the different treatment of the same theme."},
      {outcome:3,school:0,field:1,name:"Digital Illustration techniques", description:"Digital Illustration Techniques introduces digital processes and techniques in illustration. Students are introduced to various methods of creating images with digital software such as Photoshop and Illustrator. The different applications of Photoshop and Illustrator are explored and applied."},
-     {outcome:3,school:0,field:1,name:"Illustrated type 1", description:"This elective introduces the students to illustrated type. It addresses the treatment of type in an illustration context. Different approaches are discussed and experimentation with illustrated type is undertaken. The students learn how to generate their own illustrated type and become familiar with the integration of illustrated type into a final composition."},
-     {outcome:3,school:0,field:1,name:"Illustrated type 2", description:"This elective explores various methods involved in generating illustrated type. It introduces the planning and conceptual thinking that is involved in this process. The relationship between legibility and expression is discussed and analysed in depth. After completing this elective the student will not only have a better grasp of the process involved in generating illustrated typography but also on its general application. The student is encouraged to develop a detailed illustrated single letter of their choice as part of the first half of the project. The second part consists of the development of an illustrated catch phrase. The relationship between legibility and expression is discussed and analysed."},
+     {outcome:3,school:0,field:1,compulsory:2, name:"Illustrated type 1", description:"This elective introduces the students to illustrated type. It addresses the treatment of type in an illustration context. Different approaches are discussed and experimentation with illustrated type is undertaken. The students learn how to generate their own illustrated type and become familiar with the integration of illustrated type into a final composition."},
+     {outcome:3,school:0,field:1,compulsory:3, name:"Illustrated type 2", description:"This elective explores various methods involved in generating illustrated type. It introduces the planning and conceptual thinking that is involved in this process. The relationship between legibility and expression is discussed and analysed in depth. After completing this elective the student will not only have a better grasp of the process involved in generating illustrated typography but also on its general application. The student is encouraged to develop a detailed illustrated single letter of their choice as part of the first half of the project. The second part consists of the development of an illustrated catch phrase. The relationship between legibility and expression is discussed and analysed."},
      {outcome:3,school:0,field:1,name:"Advanced printmaking", description:"Advanced Printmaking incorporates a continuation of techniques learnt in Traditional Illustration 201. Students will apply the skills of etching and lino-cutting on a more in-depth level and then adapt the prints in a digital context."},
-     {outcome:3,school:0,field:1,name:"Contemporary Illustration", description:"This involves the creation of a record LP sleeve and encourages the student to explore stylistic approaches of a contemporary nature. The student is encouraged to create a complete illustrated back and front for the record in a more experimental and innovative manner. This also involves the merging of traditional and digital illustration and the integration of illustrated typography is explored."},
+     {outcome:3,school:0,field:1,compulsory:2,name:"Contemporary Illustration", description:"This involves the creation of a record LP sleeve and encourages the student to explore stylistic approaches of a contemporary nature. The student is encouraged to create a complete illustrated back and front for the record in a more experimental and innovative manner. This also involves the merging of traditional and digital illustration and the integration of illustrated typography is explored."},
      {outcome:3,school:0,field:1,name:"Artist’s book development", description:"This elective introduces the students to the development of artists’ books. The book format is explored as a platform to explore a specific theme in a unique and unconventional manner. The students create an artist’s book, which may challenge the boundaries of the format in order to communicate their specific treatment of a theme."},
-     {outcome:3,school:0,field:1,name:"Comics 1", description:"This elective explores the combination of text and image. The student is introduced to various comic styles and is exposed to different forms of text integration. Basic principles of comics are thus introduced and applied."},
-     {outcome:3,school:0,field:1,name:"Comics 2", description:"This elective focuses specifically on the visual aspects of sequential art. Different approaches to visual aspects of comics are investigated, focusing on a selected range of specific artists. The elective will culminate in an attempt towards producing an original comic."},
-     {outcome:3,school:0,field:1,name:"Sequential Art 1", description:"This elective explores the combined use of text and image to convey a message. The student is required to choose a fable and to interpret in the form of a comic by making use of sequential conventions. The text must be developed by hand, colour needs to be added and  text must be integrated successfully."},
-     {outcome:3,school:0,field:1,name:"Sequential Art 2", description:"This elective explores the development of sequential images without making use of text. The student is required to choose a text and develop a sequential narrative based on this. Only black and white may be applied. This elective thus explores storytelling based purely on visual elements."},
+     {outcome:3,school:0,field:1,compulsory:2, name:"Comics 1", description:"This elective explores the combination of text and image. The student is introduced to various comic styles and is exposed to different forms of text integration. Basic principles of comics are thus introduced and applied."},
+     {outcome:3,school:0,field:1,compulsory:3, name:"Comics 2", description:"This elective focuses specifically on the visual aspects of sequential art. Different approaches to visual aspects of comics are investigated, focusing on a selected range of specific artists. The elective will culminate in an attempt towards producing an original comic."},
+     {outcome:3,school:0,field:1,compulsory:2, name:"Sequential Art 1", description:"This elective explores the combined use of text and image to convey a message. The student is required to choose a fable and to interpret in the form of a comic by making use of sequential conventions. The text must be developed by hand, colour needs to be added and  text must be integrated successfully."},
+     {outcome:3,school:0,field:1,compulsory:3, name:"Sequential Art 2", description:"This elective explores the development of sequential images without making use of text. The student is required to choose a text and develop a sequential narrative based on this. Only black and white may be applied. This elective thus explores storytelling based purely on visual elements."},
      {outcome:3,school:0,field:1,name:"Figure drawing", description:"Figure Drawing explores traditional and contemporary ways to draw the live model. Students are familiarised with basic anatomy and drawing techniques as applied to the figure. Students are introduced to gestural drawing to grasp the human figure in motion. Students will also explore and understand the effects of mark making, composition, value development and lighting when working from a figure. "},
-     {outcome:3,school:0,field:2,name:"Intermediate Adobe Photoshop Post Production 1", description:"Intermediate Adobe Photoshop Post Production furnishes the photography student with digital workflow skills focusing on a range of corrective editing outcomes applied in commercial photography contexts.  Emphasis is placed on non-destructive workflow, file management and file preparation for output."},
+     {outcome:3,school:0,field:2,compulsory:2, name:"Intermediate Adobe Photoshop Post Production 1", description:"Intermediate Adobe Photoshop Post Production furnishes the photography student with digital workflow skills focusing on a range of corrective editing outcomes applied in commercial photography contexts.  Emphasis is placed on non-destructive workflow, file management and file preparation for output."},
      {outcome:3,school:0,field:2,name:"Studio Portraiture", description:"Studio Portraiture is an introductory module furnishing the student with basic studio proficiency and lighting techniques applied to a variety of commercial portrait contexts, such as corporate portraiture to beauty- and glamour photography.  Emphasis is placed on studio workflow and etiquette, lighting techniques and basic art direction comprising the appropriate use styling and posing of the subject correlating with the creative brief."},
-     {outcome:3,school:0,field:2,name:"Intermediate Adobe Photoshop Post Production 2", description:"Adobe Photoshop Post Production extends the photography student’s digital workflow skills focusing on batch processing of digital files, non-destructive corrective editing, and digital manipulation outcomes applied in commercial photography contexts."},
+     {outcome:3,school:0,field:2,compulsory:3, name:"Intermediate Adobe Photoshop Post Production 2", description:"Adobe Photoshop Post Production extends the photography student’s digital workflow skills focusing on batch processing of digital files, non-destructive corrective editing, and digital manipulation outcomes applied in commercial photography contexts."},
      {outcome:3,school:0,field:2,name:"Studio Product Photography", description:"Studio Product Photography is an introductory module furnishing the student with the fundamental beginner to intermediate lighting techniques applied in various commercial product photography contexts, ranging from stock photography to dressed pack shots and product advertising shots.  Emphasis is placed on studio workflow and etiquette, diverse lighting techniques, and basic art direction comprising the appropriate use of styling and context correlating with the creative brief.  Subject matter proven to be challenging to model light appropriately are specifically chosen to hone the student’s lighting skills."},
-     {outcome:3,school:0,field:2,name:"Flash Photography", description:"Flash Photography is a beginner’s course for students who are interested to learn about daylight-balanced flash photography.  This elective will focus on the various equipment and accessories that are available on the market as well as instructing students on how to apply the fundamental lighting techniques where daylight-balanced flash systems are used in commercial photography practices, such as mixed light source situations and various on-location environments."},
+     {outcome:3,school:0,field:2,compulsory:3,name:"Flash Photography", description:"Flash Photography is a beginner’s course for students who are interested to learn about daylight-balanced flash photography.  This elective will focus on the various equipment and accessories that are available on the market as well as instructing students on how to apply the fundamental lighting techniques where daylight-balanced flash systems are used in commercial photography practices, such as mixed light source situations and various on-location environments."},
      {outcome:3,school:0,field:2,name:"Architectural Photography", description:"Architectural Photography furnishes the student with a basic to intermediate range of techniques relating to both architectural interior and –exterior photography techniques.  This elective focuses on the varied commercial contexts and applications of architectural photography, and will instruct students how to use of the 35mm digital single-lens reflex camera equipment rather than specialist cameras traditionally used for practicing commercial architectural photography in order to achieve desired results."},
-     {outcome:3,school:0,field:2,name:"Advanced Adobe Photoshop Post Production 1", description:"This fundamental elective is compulsory for Photography 301 students.  Advanced Adobe Photoshop Post Production 301 furnishes the photography student with advanced non-destructive workflow skills.  This module places emphasis on professional corrective editing and retouching, time-efficient batch processing, professional colour grading and colour correction and file preparation for various output media."},
-     {outcome:3,school:0,field:2,name:"Advanced Adobe Photoshop Post Production 2", description:"Advanced Adobe Photoshop Post Production 302 equips the photography student with advanced non-destructive manipulative editing skills, including compositing, exposure- and focus stacking techniques, as well as the use of high dynamic range image editing.  This elective provides the student exposure to the in-demand post-production techniques used in various commercial applications and serves to refine the extensive skill sets to match industry standards of retouching."},
+     {outcome:3,school:0,field:2,compulsory:2, name:"Advanced Adobe Photoshop Post Production 1", description:"This fundamental elective is compulsory for Photography 301 students.  Advanced Adobe Photoshop Post Production 301 furnishes the photography student with advanced non-destructive workflow skills.  This module places emphasis on professional corrective editing and retouching, time-efficient batch processing, professional colour grading and colour correction and file preparation for various output media."},
+     {outcome:3,school:0,field:2,compulsory:3, name:"Advanced Adobe Photoshop Post Production 2", description:"Advanced Adobe Photoshop Post Production 302 equips the photography student with advanced non-destructive manipulative editing skills, including compositing, exposure- and focus stacking techniques, as well as the use of high dynamic range image editing.  This elective provides the student exposure to the in-demand post-production techniques used in various commercial applications and serves to refine the extensive skill sets to match industry standards of retouching."},
      {outcome:3,school:0,field:2,name:"Advanced Flash Photography", description:"Advanced Flash Photography aims to extend and refine the student’s skills sets pertaining to lighting solutions in commercial applications where daylight-balanced flash is combined with mixed light sources or mixed lighting conditions in various on-location productions.  This elective provides the student with a variety of commercial contexts wherein advanced lighting skills are demanded and commands both technical and creative insight from the student to deliver a final product reflecting the specifications of the creative brief."},
      {outcome:3,school:0,field:2,name:"Advanced Studio Portraiture", description:"Advanced Studio Portraiture broadens and refines the student’s lighting and studio production skill sets pertaining to portrait-based photography in a controlled studio environment.  This elective introduces the student to in-demand commercial applications wherein the student’s technical and creative skill sets are challenged to deliver a final product matching industry standards.  Emphasis is placed on special effects lighting and studio production, wherein students perform tasks as production teams in addition to delivering individual work.  The practical output ranges from corporate portraiture to editorial, beauty, and fashion photography."},
      {outcome:3,school:0,field:2,name:"Advanced Studio Product Photography", description:"Advanced Studio Product Photography broadens the student’s lighting and production skills sets, and furnishes the student with specialist lighting and production techniques pertaining to subject matter used for commercial product photography applications.  Emphasis is placed on advanced production techniques, which comprise the professional desktop photographer’s workflow of lighting and capture techniques in tandem with post-production.  Subject matter proven challenging to appropriately capture is specifically chosen in order to hone the student’s technical skill sets ranging from pre- to post-production."},
@@ -563,10 +563,13 @@ var updateFields = function () {
 }
 
 var updatemajors = function () {
+  console.log("updating majors")
   if (state.year == 1) { $("#barcore").animate( { width: "60px"}, 500); }
   if (state.year == 2) { $("#barcore").animate( { width: "20px"}, 500); }
   if (state.year == 3) { $("#barcore").animate( { width: "30px"}, 500); }  
-  var electivesupdate = '';
+  
+  
+
   for (var num in [0,1,2]) {
     if (state.majorsubjects[num] != undefined) {
       $("#subjectblock"+num).removeClass("courselayoutaddsubject");
@@ -581,12 +584,7 @@ var updatemajors = function () {
       $("#bar"+num).css("background", colors[state.majorsubjects[num].school+1])
       $("#bar"+num).css("background", colors[state.majorsubjects[num].school+1]).animate( { width: state.majorsubjects[num].credits+"px"}, 500)
 
-      //electives from professional skills courses.          
-      for (var c in coursedata.courselist) {
-        if ((coursedata.courselist[c].outcome == 3)&&(coursedata.courselist[c].school == state.majorsubjects[num].school)&&(coursedata.courselist[c].field == state.majorsubjects[num].field)) {
-          electivesupdate += '<span data-school="'+state.majorsubjects[num].school+'" style="color: #fff; background: #81898b;">'+coursedata.courselist[c].name+'</span> ';
-        }
-      }
+
 
     } else {
       $("#subjectblock"+num+"name").hide();
@@ -596,25 +594,67 @@ var updatemajors = function () {
       $("#subjectblock"+num).css("background", "#e5e7e9")
       $("#bar"+num).css("background", "#e5e7e9").animate( { width: "0px"}, 500)
 
+      
+
     }
   }
-  ////
-  if (state.year == 1) { electivesupdate = ''; }; //year 1 has no electives
-  if (electivesupdate != '') {
-    $("#choiceelectiveswrap").html(electivesupdate)  
-    $("#choiceelectivemenu").show();
-
-    $("#choiceelectiveswrap > span").hover( function () {
-        $(this).css('background', colors[$(this).data("school")+1]);
-        $(this).css('cursor', 'pointer')
-      }, function () {
-        $(this).css('background', '#81898b')
-    } )
-
-  } else {    
-    $("#choiceelectivemenu").hide();
-    $("#choiceelectiveswrap").html(electivesupdate)  
+  
+  // COMPULSORY UPDATE
+  var compulsoryupdate = '<h3 id="layoutsubjectsheading">Compulsory Electives</h3>';
+  for (var num in [0,1]) {
+    compulsoryupdate += '<div class="pure-g-r" style="margin-bottom: 6px; height:'+($("#majorsubjectswrapper > div:nth-child(2) > div:nth-child(1)").height()+2)+'px">';
+    if (state.majorsubjects[num] != undefined) {
+      for (var c in coursedata.courselist) {
+        if ((coursedata.courselist[c].outcome == 3)&&(coursedata.courselist[c].school == state.majorsubjects[num].school)&&(coursedata.courselist[c].field == state.majorsubjects[num].field)&&(coursedata.courselist[c].compulsory == state.year)) {
+          console.log(coursedata.courselist[c])
+          compulsoryupdate += '<div class="pure-u-1-1 compulsorysubjectsblocks"  >';
+          compulsoryupdate += '<div id="compulsoryblock0" class="courselayoutcompulsorywrap" style="padding-top: 0;">'+coursedata.courselist[c].name+'</div>';
+          compulsoryupdate += '</div>';
+        }
+      }
+    }
+    compulsoryupdate += '</div>';
   }
+  $("#compulsorysubjectswrapper").html(compulsoryupdate)
+
+
+  //// ELECTIVES
+  
+  if (state.year == 1) { 
+    $("#choiceelectivemenu").hide();
+    $("#choiceelectiveswrap").html('') 
+  }; 
+
+  if ((state.year == 2)||(state.year == 3)) { 
+    var electivesupdate = '';
+
+    for (var num in [0,1,2]) {
+      if (state.majorsubjects[num] != undefined) {
+          //electives from professional skills courses.          
+          for (var c in coursedata.courselist) {
+            if ((coursedata.courselist[c].outcome == 3)&&(coursedata.courselist[c].school == state.majorsubjects[num].school)&&(coursedata.courselist[c].field == state.majorsubjects[num].field)&&(coursedata.courselist[c].compulsory != state.year)) {
+              electivesupdate += '<span data-school="'+state.majorsubjects[num].school+'" style="color: #fff; background: #81898b; vertical-align: center;">'+coursedata.courselist[c].name+'</span> ';
+            }
+          }
+      }
+    }
+
+    if (electivesupdate == '') {
+      $("#choiceelectivemenu").hide();
+      $("#choiceelectiveswrap").html('') 
+    } else {
+          $("#choiceelectiveswrap").html(electivesupdate)  
+          $("#choiceelectivemenu").show();
+
+          $("#choiceelectiveswrap > span").hover( function () {
+              $(this).css('background', colors[$(this).data("school")+1]);
+              $(this).css('cursor', 'pointer')
+            }, function () {
+              $(this).css('background', '#81898b')
+          })
+        } 
+
+  }//update electives
   
 }
 
@@ -661,7 +701,7 @@ var updateOutcomes = function () {
     if (state.outcome == 0) { $(".careerwrapper").css("color", colors[state.school+1]); }
 
 
-    if ((state.outcome == 1)||(state.outcome == 2)||(state.outcome == 3)) {      
+    if ((state.outcome == 1)||(state.outcome == 2)||(state.outcome == 3)||(state.outcome == 4)) {      
           var subjectlist = "";
           for (course in coursedata.courselist) 
           {
@@ -674,11 +714,13 @@ var updateOutcomes = function () {
             }
 
             //if field selected list only this field courses
-            if ((coursedata.courselist[course].outcome == state.outcome)&&(coursedata.courselist[course].field == state.field)&&(coursedata.courselist[course].school == state.school)) {
+            var tempoutcome = state.outcome;
+            if (tempoutcome == 4) { tempoutcome = 2}
+            if ((coursedata.courselist[course].outcome == tempoutcome)&&(coursedata.courselist[course].field == state.field)&&(coursedata.courselist[course].school == state.school)) {
               
               //if SLP bundle?
               var slpinfo = '<br><br>';
-              if ((state.outcome == 2)&&(coursedata.courselist[course].slp != undefined)) {
+              if (((state.outcome == 2)||(state.outcome == 4))&&(coursedata.courselist[course].slp != undefined)) {
                   for (var c in coursedata.courselist) 
                   {
                     if ((coursedata.courselist[c].outcome == 1)&&(coursedata.courselist[c].slp == coursedata.courselist[course].slp)) { //shortcourses that form slp
@@ -1033,6 +1075,10 @@ var updateOutcomes = function () {
 
     //ONE YEAR
     if (state.outcome == 4) {        
+
+      //SHOW SLPS
+
+
       $("#courselayoutmenu").fadeIn(250);
       $("#outcomes7").css("background", colors[0])
       $("#outcomes8").css("background", colors[state.school+1]) 
