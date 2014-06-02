@@ -633,3 +633,16 @@ schoolbigblocks { overflow: hidden;}
 	color: #000;
 	font-weight: 700; 
 }
+
+
+@media (max-width:767px) {
+	.schoolbigblocks { display: none;}
+	.left { margin-left: 0; margin-right: 0;}
+	.mid { margin-left: 0; margin-right: 0;}
+	.right { margin-left: 0; margin-right: 0;}
+
+	#matrixBigDS {	margin-left: 0px;	margin-right: 0px; border-bottom: 5px solid #fff; margin-bottom: 2px;}
+	#matrixBigFA { 	margin-left: 0px;	margin-right: 0px; border-bottom: 5px solid #fff; margin-bottom: 2px;}
+	#matrixBigIA { 	margin-left: 0px;	margin-right: 0px; border-bottom: 5px solid #fff; margin-bottom: 2px;}
+	#matrixBigVA {	margin-left: 0px;	margin-right: 0px; border-bottom: 5px solid #fff; margin-bottom: 2px;}
+}

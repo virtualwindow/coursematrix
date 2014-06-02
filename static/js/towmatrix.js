@@ -21,9 +21,18 @@ var schoolblock3slidesEnabled = 1;
 var schoolblock4slidesEnabled = 1;
 var schoolblock5slidesEnabled = 1;
 
+function mobile() {
+  if (window.innerWidth <= 767) {
+    $(".schoolbigblocks").hide();
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
 function schoolblock1slides()
 {
-  if (schoolblock1slidesEnabled == 1) {
+  if ((schoolblock1slidesEnabled == 1) && (mobile() == 0)) {
     schoolblock1slidesi=(schoolblock1slidesi>=schoolblock1slidessequence.length-1)?0:(schoolblock1slidesi+1);
     $("#schoolblock1demo" + schoolblock1slidestoggle).css('background-image', 'url(' + schoolblock1slidessequence[schoolblock1slidesi] + ')');
     var w = $("#schoolblock1").width();
@@ -41,7 +50,7 @@ function schoolblock1slides()
 
 function schoolblock2slides()
 {
-  if (schoolblock2slidesEnabled == 1) {
+  if ((schoolblock2slidesEnabled == 1) && (mobile() == 0)) {
     schoolblock2slidesi=(schoolblock2slidesi>=schoolblock2slidessequence.length-1)?0:(schoolblock2slidesi+1);
     $("#schoolblock2demo" + schoolblock2slidestoggle).css('background-image', 'url(' + schoolblock2slidessequence[schoolblock2slidesi] + ')');
     var w = $("#schoolblock2").width();
@@ -59,7 +68,7 @@ function schoolblock2slides()
 
 function schoolblock3slides()
 {
-  if (schoolblock3slidesEnabled == 1) {
+  if ((schoolblock3slidesEnabled == 1) && (mobile() == 0)) {
     schoolblock3slidesi=(schoolblock3slidesi>=schoolblock3slidessequence.length-1)?0:(schoolblock3slidesi+1);
     $("#schoolblock3demo" + schoolblock3slidestoggle).css('background-image', 'url(' + schoolblock3slidessequence[schoolblock3slidesi] + ')');
     var w = $("#schoolblock3").width();
@@ -77,7 +86,7 @@ function schoolblock3slides()
 
 function schoolblock4slides()
 {
-  if (schoolblock4slidesEnabled == 1) {
+  if ((schoolblock4slidesEnabled == 1) && (mobile() == 0)) {
     schoolblock4slidesi=(schoolblock4slidesi>=schoolblock4slidessequence.length-1)?0:(schoolblock4slidesi+1);
     $("#schoolblock4demo" + schoolblock4slidestoggle).css('background-image', 'url(' + schoolblock4slidessequence[schoolblock4slidesi] + ')');
     var w = $("#schoolblock4").width();
@@ -311,8 +320,9 @@ courselist: [
      {outcome:2,school:3,field:4,name:"SLPeVisual Arts 2", description:"In development."},
      {outcome:2,school:3,field:4,name:"SLPeVisual Arts 3", description:"In development."},
 
-    //Professional Skills    
-     {outcome:3,school:0,field:0,compulsory:2,name:"Copywriting", description:"Copywriting equips students to write for various media platforms for the purpose of advertising or marketing. The main aim of the copy is to persuade the addressee (reader, listener) to buy into an advertised product or to subscribe to a certain viewpoint that the text shares."},
+    //Professional Skills/Major Electives
+    // set pscHide to 1 to hide from professional skills lists
+     {outcome:3, pscHide: 1,school:0,field:0,compulsory:2,name:"Copywriting", description:"Copywriting equips students to write for various media platforms for the purpose of advertising or marketing. The main aim of the copy is to persuade the addressee (reader, listener) to buy into an advertised product or to subscribe to a certain viewpoint that the text shares."},
      {outcome:3,school:0,field:0,compulsory:3,name:"Digital Publishing", description:"Digital Publishing aims to emulate traditional printing media on modern digital mediums such as tablets and phones. Rather than a traditional printed page consisting of text and imagery, digital publishing provides the viewer with a greater sense of interactivity in the form of animations, video and sound. "},
      {outcome:3,school:0,field:0,compulsory:3,name:"Advanced Printing Practice", description:"Advanced Printing Practice is geared to equip students with the necessary tools to be able to create documents for print. The printing process will be explored in depth in relation to the various forms of commercial printing. The evolution of print and its various incarnations through the ages will also be discussed."},
      {outcome:3,school:0,field:0,compulsory:2,name:"Concept Development", description:"The main aim of the concept development course is to build a solid understanding of the creative process and the associated thinking skills that can be used to generate and implement ideas and concepts.  The course aims to strengthen student ideas, visualisation and thinking abilities by promoting curiosity, knowledge building and exploration. The course also seeks to teach students to draw inspiration from various sources using key thinking techniques"},
@@ -492,6 +502,42 @@ courselist: [
       { year: 2, school: 3, field: 4, name: "Visual Art 201", description: "In development.", credits: 50},
       { year: 3, school: 3, field: 4, name: "Visual Art 301", description: "In development.", credits: 50},      
     ], 
+    coresubjects: [ //not connected as yet
+      { year: 1, school: 0, name: "Visual Culture", credits: 15},
+      { year: 1, school: 0, name: "Drawing", credits: 15},
+      { year: 1, school: 0, name: "Academic Skills", credits: 10},
+      { year: 1, school: 0, name: "Art History", credits: 10},
+      { year: 1, school: 0, name: "Essential Software", credits: 10},
+      { year: 1, school: 1, name: "Film Theory", credits: 15},
+      { year: 1, school: 1, name: "Media Aesthetics", credits: 15},
+      { year: 1, school: 1, name: "Academic Skills", credits: 10},
+      { year: 1, school: 1, name: "Story & Ritual", credits: 10},
+    ],
+    carreers: [
+      {school: 0, name: "Compositor", description: "Edits and composites multi-layered audio-visual content for digitally enhanced film and television productions."},
+      {school: 0, name: "Sound Designer for Film & Television", description: "Designs and assembles all the audio components of an audio-visual project from music to voice-overs and completes the final mix."},
+      {school: 0, name: "Corporate Filmmaker", description: "Conceptualises and realises audio-visual content relevant to the needs of corporate businesses."},
+      {school: 0, name: "Film/TV Editor", description: "Edits and supervises post-production audio-visual content for film and television."},
+      {school: 0, name: "Layout Artist", description: "Takes direction from storyboard artists and directors to create virtual environments while both 2D and 3D skills. Layout artists will often work within a team of 3D artists on large productions."},
+      {school: 1, name: "carreer", description: "carreer description text placeholder"},
+      {school: 1, name: "carreer", description: "carreer description text placeholder"},
+      {school: 1, name: "carreer", description: "carreer description text placeholder"},
+      {school: 1, name: "carreer", description: "carreer description text placeholder"},
+      {school: 1, name: "carreer", description: "carreer description text placeholder"},
+      {school: 1, name: "carreer", description: "carreer description text placeholder"},
+      {school: 2, name: "carreer", description: "carreer description text placeholder"},
+      {school: 2, name: "carreer", description: "carreer description text placeholder"},
+      {school: 2, name: "carreer", description: "carreer description text placeholder"},
+      {school: 2, name: "carreer", description: "carreer description text placeholder"},
+      {school: 2, name: "carreer", description: "carreer description text placeholder"},
+      {school: 2, name: "carreer", description: "carreer description text placeholder"},
+      {school: 3, name: "carreer", description: "carreer description text placeholder"},
+      {school: 3, name: "carreer", description: "carreer description text placeholder"},
+      {school: 3, name: "carreer", description: "carreer description text placeholder"},
+      {school: 3, name: "carreer", description: "carreer description text placeholder"},
+      {school: 3, name: "carreer", description: "carreer description text placeholder"},
+      {school: 3, name: "carreer", description: "carreer description text placeholder"},      
+    ]
 }
 
 
@@ -560,6 +606,11 @@ var updateFields = function () {
           $( "#field"+a ).css("background", colors[0])  
         }
 
+  }
+
+  if (mobile() == 1) {
+    $(".fieldsmenu").css("margin-top", "0px")
+    $(".fields").css("margin-top", "2px")    
   }
   updateOutcomes();
 }
@@ -700,7 +751,26 @@ var updateOutcomes = function () {
     }
 
     //CARREERS
-    if (state.outcome == 0) { $(".careerwrapper").css("color", colors[state.school+1]); }
+    if (state.outcome == 0) { 
+
+      
+      $("#carreersholder").html('');
+      var carreertext = ''
+      for (var carreer in coursedata.carreers) {
+        if (coursedata.carreers[carreer].school == state.school) {
+          carreertext += '<div class="pure-u-1-3">';
+          carreertext += '<div class="careerwrapper" >';
+          carreertext += '<i class="fa fa-plus"></i>';
+          carreertext += '<div class="career">';
+          carreertext += '<span>'+coursedata.carreers[carreer].name+':</span>'+coursedata.carreers[carreer].description;
+          carreertext += '</div>';
+          carreertext += '</div>';
+          carreertext += '</div>';
+        }
+      }
+      $("#carreersholder").html(carreertext);
+      $(".careerwrapper").css("color", colors[state.school+1]);
+    }
 
 
     if ((state.outcome == 1)||(state.outcome == 2)||(state.outcome == 3)||(state.outcome == 4)) {      
@@ -732,18 +802,28 @@ var updateOutcomes = function () {
                   }                
               }
               
-              if (haveselected == false) {
-                subjectlist += '<li><div class="subjectbar" data-number="'+course+'"><div class="subjectadderbutton"';
-                subjectlist += 'data-mode="add" data-name="'+coursedata.courselist[course].name+'">+</div>';  
-                subjectlist += '<div class="subjectname">'+coursedata.courselist[course].name+'</div></div>';
-                subjectlist += '<p id="subjectTextBlock" style="display: none;">'+coursedata.courselist[course].description+slpinfo+'</p></li>';                  
-              } 
-              
-              if (haveselected == true) {
-                subjectlist += '<li><div id="subjectbar" data-number="'+course+'"><div class="subjectadderbutton"';
-                subjectlist += 'data-mode="remove" data-name="'+coursedata.courselist[course].name+'">-</div>';  
-                subjectlist += '<div class="subjectname" style="background: '+colors[state.school+1]+'; cursor: pointer;">'+coursedata.courselist[course].name+'</div></div>';
-                subjectlist += '<p id="subjectTextBlock" >'+coursedata.courselist[course].description+slpinfo+'</p></li>';   
+              var hide = 0;
+              if (coursedata.courselist[course].pscHide == 1) { 
+                if (state.outcome == 3) {
+                  console.log("hide PSC")  
+                  hide = 1;
+                }              
+              }
+
+              if (hide == 0) {
+                if (haveselected == false) {
+                  subjectlist += '<li><div class="subjectbar" data-number="'+course+'"><div class="subjectadderbutton"';
+                  subjectlist += 'data-mode="add" data-name="'+coursedata.courselist[course].name+'">+</div>';  
+                  subjectlist += '<div class="subjectname">'+coursedata.courselist[course].name+'</div></div>';
+                  subjectlist += '<p id="subjectTextBlock" style="display: none;">'+coursedata.courselist[course].description+slpinfo+'</p></li>';                  
+                } 
+                
+                if (haveselected == true) {
+                  subjectlist += '<li><div id="subjectbar" data-number="'+course+'"><div class="subjectadderbutton"';
+                  subjectlist += 'data-mode="remove" data-name="'+coursedata.courselist[course].name+'">-</div>';  
+                  subjectlist += '<div class="subjectname" style="background: '+colors[state.school+1]+'; cursor: pointer;">'+coursedata.courselist[course].name+'</div></div>';
+                  subjectlist += '<p id="subjectTextBlock" >'+coursedata.courselist[course].description+slpinfo+'</p></li>';   
+                }
               }
 
               
@@ -879,31 +959,84 @@ var updateOutcomes = function () {
       coresubjects +='<div id="coresubjectsblock0" class="pure-u-1-2">';
       coresubjects +='<div class="courselayoutsubjectwrap left coreleft" >';
       coresubjects +='<h3 class="courselayoutsubjecttitle">Visual Culture</h3>';
-      coresubjects +='<h4 class="courselayoutsubjectcredits">20 credits</h4>';
+      coresubjects +='<h4 class="courselayoutsubjectcredits">15 credits</h4>';
       coresubjects +='</div>';
       coresubjects +='</div>';
       coresubjects +='<div id="coresubjectsblock1" class="pure-u-1-2">';
       coresubjects +='<div class="courselayoutsubjectwrap right" >';
       coresubjects +='<h3 class="courselayoutsubjecttitle">Drawing</h3>';
-      coresubjects +='<h4 class="courselayoutsubjectcredits">20 credits</h4>';
+      coresubjects +='<h4 class="courselayoutsubjectcredits">15 credits</h4>';
       coresubjects +='</div>';
       coresubjects +='</div>';
       coresubjects +='</div>';
       coresubjects +='<div class="pure-g-r" style="margin-top: 8px;">';
-      coresubjects +='<div id="coresubjectsblock2" class="pure-u-1-2">';
-      coresubjects +='<div class="courselayoutsubjectwrap left coreleft" >';
-      coresubjects +='<h3 class="courselayoutsubjecttitle">Academic Skills</h3>';
-      coresubjects +='<h4 class="courselayoutsubjectcredits">10 credits</h4>';
-      coresubjects +='</div>';
-      coresubjects +='</div>';
-      coresubjects +='<div id="coresubjectsblock3" class="pure-u-1-2">';
-      coresubjects +='<div class="courselayoutsubjectwrap right" >';
-      coresubjects +='<h3 class="courselayoutsubjecttitle">Art History</h3>';
-      coresubjects +='<h4 class="courselayoutsubjectcredits">10 credits</h4>';
-      coresubjects +='</div>';
-      coresubjects +='</div>';
+        coresubjects +='<div id="coresubjectsblock2" class="pure-u-1-2">';
+        coresubjects +='<div class="courselayoutsubjectwrap left coreleft" >';
+        coresubjects +='<h3 class="courselayoutsubjecttitle">Academic Skills</h3>';
+        coresubjects +='<h4 class="courselayoutsubjectcredits">10 credits</h4>';
+        coresubjects +='</div>';
+        coresubjects +='</div>';
+
+        coresubjects +='<div id="coresubjectsblock3" class="pure-u-1-2">';
+        coresubjects +='<div class="courselayoutsubjectwrap right" >';
+        coresubjects +='<h3 class="courselayoutsubjecttitle">Art History</h3>';
+        coresubjects +='<h4 class="courselayoutsubjectcredits">10 credits</h4>';
+        coresubjects +='</div>';
+        coresubjects +='</div>';
       coresubjects +='</div>';
 
+      coresubjects +='<div class="pure-g-r" style="margin-top: 8px;">';
+        coresubjects +='<div id="coresubjectsblock4" class="pure-u-1-2">';
+        coresubjects +='<div class="courselayoutsubjectwrap left coreleft" >';
+        coresubjects +='<h3 class="courselayoutsubjecttitle">Essential Software</h3>';
+        coresubjects +='<h4 class="courselayoutsubjectcredits">10 credits</h4>';
+        coresubjects +='</div>';
+        coresubjects +='</div>';
+      coresubjects +='</div>';
+
+      //SPECIAL CASE FILM ART SCHOOL
+      if (state.school == 1) {
+          var coresubjects = '';
+          coresubjects +='<h3 id="layoutsubjectsheading">Core Subjects</h3>';
+          coresubjects +='<div class="pure-g-r coresubjectsholder">';
+          coresubjects +='<div id="coresubjectsblock0" class="pure-u-1-2">';
+          coresubjects +='<div class="courselayoutsubjectwrap left coreleft" >';
+          coresubjects +='<h3 class="courselayoutsubjecttitle">Film Theory</h3>';
+          coresubjects +='<h4 class="courselayoutsubjectcredits">15 credits</h4>';
+          coresubjects +='</div>';
+          coresubjects +='</div>';
+          coresubjects +='<div id="coresubjectsblock1" class="pure-u-1-2">';
+          coresubjects +='<div class="courselayoutsubjectwrap right" >';
+          coresubjects +='<h3 class="courselayoutsubjecttitle">Media Aesthetics</h3>';
+          coresubjects +='<h4 class="courselayoutsubjectcredits">15 credits</h4>';
+          coresubjects +='</div>';
+          coresubjects +='</div>';
+          coresubjects +='</div>';
+          coresubjects +='<div class="pure-g-r" style="margin-top: 8px;">';
+            coresubjects +='<div id="coresubjectsblock2" class="pure-u-1-2">';
+            coresubjects +='<div class="courselayoutsubjectwrap left coreleft" >';
+            coresubjects +='<h3 class="courselayoutsubjecttitle">Academic Skills</h3>';
+            coresubjects +='<h4 class="courselayoutsubjectcredits">10 credits</h4>';
+            coresubjects +='</div>';
+            coresubjects +='</div>';
+
+            coresubjects +='<div id="coresubjectsblock3" class="pure-u-1-2">';
+            coresubjects +='<div class="courselayoutsubjectwrap right" >';
+            coresubjects +='<h3 class="courselayoutsubjecttitle">Story &amp; Ritual</h3>';
+            coresubjects +='<h4 class="courselayoutsubjectcredits">10 credits</h4>';
+            coresubjects +='</div>';
+            coresubjects +='</div>';
+          coresubjects +='</div>';
+
+          coresubjects +='<div class="pure-g-r" style="margin-top: 8px;">';
+            coresubjects +='<div id="coresubjectsblock4" class="pure-u-1-2">';
+            coresubjects +='<div class="courselayoutsubjectwrap left coreleft" >';
+            coresubjects +='<h3 class="courselayoutsubjecttitle">Essential Software</h3>';
+            coresubjects +='<h4 class="courselayoutsubjectcredits">10 credits</h4>';
+            coresubjects +='</div>';
+            coresubjects +='</div>';
+          coresubjects +='</div>';
+      }
       $("#coresubjectswrapper").html(coresubjects)
 
     }
@@ -1095,6 +1228,9 @@ var updateOutcomes = function () {
         $("#courselayoutmenu").fadeOut(250);
     }
 
+      $("#courselayoutleftcredits").show();
+      $("#courselayoutleftcreditsbar").show();
+      $(".courselayoutsubjectcredits").show();
     //ONE YEAR
     if (state.outcome == 4) {        
 
@@ -1107,6 +1243,11 @@ var updateOutcomes = function () {
       $("#outcomes9").css("background", colors[0])   
       $("#courselayoutleftcontentyear").html(1).show()
       $("#courselayoutleftcontenttitle").html("Year Programme").show()
+
+      $("#courselayoutleftcredits").hide();
+      $("#courselayoutleftcreditsbar").hide();
+
+      
 
       $("#coresubjectsblock").removeClass("pure-u-1-3").addClass("pure-u-1-6")
       $("#coresubjectsblock0").removeClass("pure-u-1-2").addClass("pure-u-1-1")
@@ -1171,6 +1312,7 @@ var updateOutcomes = function () {
       }
 
       $("#coresubjectswrapper").html(coresubjects)
+      $(".courselayoutsubjectcredits").hide(); //hide credits on 1 year programme
 
     }
     $(".coursemenu > div").css("height", $(".structureContent").height());  //fixes height bug
@@ -1292,94 +1434,113 @@ $( document ).ready(function() {
 
     $( "#matrixBigDS" ).hover(
       function() {
-        if (state.school == -1) {
-          $( ".schoolbigblocks" ).fadeIn(500);
+        if (mobile() == 0) {
+          if (state.school == -1) {
+            $( ".schoolbigblocks" ).fadeIn(500);
+          }
+          
+          $("#schoolblock1text").fadeIn(500)
+          schoolblock1slidesEnabled = 0;
+          $("#schoolblock1demo0").fadeOut(500);
+          $("#schoolblock1demo1").fadeOut(500);
         }
-        
-        $("#schoolblock1text").fadeIn(500)
-        schoolblock1slidesEnabled = 0;
-        $("#schoolblock1demo0").fadeOut(500);
-        $("#schoolblock1demo1").fadeOut(500);
+
         $("#schoolblock1text").width($("#schoolblock1").width());
         $("#schoolblock2text").width($("#schoolblock2").width());
         $("#schoolblock3text").width($("#schoolblock3").width());
         $("#schoolblock4text").width($("#schoolblock4").width());
         $("#schoolblock5text").width($("#schoolblock5").width());        
       }, function() {      
-        $("#schoolblock1text").fadeOut(500)
-        if (state.school == -1) {
-          schoolblock1slidesEnabled = 1;
-        }        
-        schoolblock1slides();
+        if (mobile() == 0) {
+          $("#schoolblock1text").fadeOut(500)
+          if (state.school == -1) {
+            schoolblock1slidesEnabled = 1;
+          }        
+          schoolblock1slides();
+        }
+        
       }
     );
 
     $( "#matrixBigFA" ).hover(
       function() {
-        if (state.school == -1) {
-          $( ".schoolbigblocks" ).fadeIn(500);
+        if (mobile() == 0) {
+          if (state.school == -1) {
+            $( ".schoolbigblocks" ).fadeIn(500);
+          }
+          $("#schoolblock2text").fadeIn(500)
+          schoolblock2slidesEnabled = 0;
+          $("#schoolblock2demo0").fadeOut(500);
+          $("#schoolblock2demo1").fadeOut(500);
         }
-        $("#schoolblock2text").fadeIn(500)
-        schoolblock2slidesEnabled = 0;
-        $("#schoolblock2demo0").fadeOut(500);
-        $("#schoolblock2demo1").fadeOut(500);
+
         $("#schoolblock1text").width($("#schoolblock1").width());
         $("#schoolblock2text").width($("#schoolblock2").width());
         $("#schoolblock3text").width($("#schoolblock3").width());
         $("#schoolblock4text").width($("#schoolblock4").width());
         $("#schoolblock5text").width($("#schoolblock5").width());          
       }, function() {      
-        $("#schoolblock2text").fadeOut(500)
-        if (state.school == -1) {
-          schoolblock2slidesEnabled = 1;
-        }        
-        schoolblock2slides();
+        if (mobile() == 0) {
+          $("#schoolblock2text").fadeOut(500)
+          if (state.school == -1) {
+            schoolblock2slidesEnabled = 1;
+          }        
+          schoolblock2slides();
+        }
       }
     );
 
     $( "#matrixBigIA" ).hover(
       function() {
-        if (state.school == -1) {
-          $( ".schoolbigblocks" ).fadeIn(500);
+        if (mobile() == 0) {
+          if (state.school == -1) {
+            $( ".schoolbigblocks" ).fadeIn(500);
+          }
+          $("#schoolblock3text").fadeIn(500)
+          schoolblock3slidesEnabled = 0;
+          $("#schoolblock3demo0").fadeOut(500);
+          $("#schoolblock3demo1").fadeOut(500);
         }
-        $("#schoolblock3text").fadeIn(500)
-        schoolblock3slidesEnabled = 0;
-        $("#schoolblock3demo0").fadeOut(500);
-        $("#schoolblock3demo1").fadeOut(500);
         $("#schoolblock1text").width($("#schoolblock1").width());
         $("#schoolblock2text").width($("#schoolblock2").width());
         $("#schoolblock3text").width($("#schoolblock3").width());
         $("#schoolblock4text").width($("#schoolblock4").width());
         $("#schoolblock5text").width($("#schoolblock5").width());         
       }, function() {      
-        $("#schoolblock3text").fadeOut(500)
-        if (state.school == -1) {
-          schoolblock3slidesEnabled = 1;
-        }        
-        schoolblock3slides();
+        if (mobile() == 0) { 
+          $("#schoolblock3text").fadeOut(500)
+          if (state.school == -1) {
+            schoolblock3slidesEnabled = 1;
+          }        
+          schoolblock3slides();
+        }
       }
     );
 
     $( "#matrixBigVA" ).hover(
       function() {
-        if (state.school == -1) {
-          $( ".schoolbigblocks" ).fadeIn(500);
+        if (mobile() == 0) {
+          if (state.school == -1) {
+            $( ".schoolbigblocks" ).fadeIn(500);
+          }
+          $("#schoolblock4text").fadeIn(500)
+          schoolblock4slidesEnabled = 0;
+          $("#schoolblock4demo0").fadeOut(500);
+          $("#schoolblock4demo1").fadeOut(500);
         }
-        $("#schoolblock4text").fadeIn(500)
-        schoolblock4slidesEnabled = 0;
-        $("#schoolblock4demo0").fadeOut(500);
-        $("#schoolblock4demo1").fadeOut(500);
         $("#schoolblock1text").width($("#schoolblock1").width());
         $("#schoolblock2text").width($("#schoolblock2").width());
         $("#schoolblock3text").width($("#schoolblock3").width());
         $("#schoolblock4text").width($("#schoolblock4").width());
         $("#schoolblock5text").width($("#schoolblock5").width());          
       }, function() {      
-        $("#schoolblock4text").fadeOut(500)
-        if (state.school == -1) {
-          schoolblock4slidesEnabled = 1;
-        }        
-        schoolblock4slides();
+        if (mobile() == 0) {
+          $("#schoolblock4text").fadeOut(500)
+          if (state.school == -1) {
+            schoolblock4slidesEnabled = 1;
+          }        
+          schoolblock4slides();
+        }
       }
     );
 
