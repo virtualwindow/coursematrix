@@ -645,4 +645,6 @@ schoolbigblocks { overflow: hidden;}
 	#matrixBigFA { 	margin-left: 0px;	margin-right: 0px; border-bottom: 5px solid #fff; margin-bottom: 2px;}
 	#matrixBigIA { 	margin-left: 0px;	margin-right: 0px; border-bottom: 5px solid #fff; margin-bottom: 2px;}
 	#matrixBigVA {	margin-left: 0px;	margin-right: 0px; border-bottom: 5px solid #fff; margin-bottom: 2px;}
+	.content-subhead {font-size: 14px;}
+
 }
