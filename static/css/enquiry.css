@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(/fonts/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(/fonts/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(/fonts/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+
+.pure-form {
+  
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+h1, h2, h3, h4 { color: #000;}
+
+
+.formwrapper {
+  max-width: 28em;
+}
+
+.pure-form input[type] {
+    border: 2px solid #ddd;
+    box-shadow: none;
+    font-size: 100%;
+    margin-bottom: 1em;
+    width: 15em;
+    height: 2.5em;
+
+}
+
+.pure-form textarea {
+  resize:vertical ;
+      border: 2px solid #ddd;
+    box-shadow: none;
+    font-size: 100%;
+    margin-bottom: 1em;
+    width: 15em;
+}
+
+.pure-form select {
+      border: 2px solid #ddd;
+    box-shadow: none;
+    font-size: 100%;
+    margin-bottom: 1em;
+    height: 2.5em;
+    width: 15em;
+}
+
+.pure-button-primary {
+  background: rgb(25,189,45);
+}
+.skipbutton {
+  background: rgb(200,200,200);
+  margin-bottom: 10px;
+}
+
+.enquirybtns {
+  float: right;
+  margin-right: 25px;
+}
+
+.formmessage {
+  text-align: center;
+}
