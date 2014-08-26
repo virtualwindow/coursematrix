@@ -643,7 +643,7 @@ var updateFields = function () {
 }
 
 var updatemajors = function () {
-  console.log("updating majors")
+  
   if (state.year == 1) { $("#barcore").animate( { width: "60px"}, 500); }
   if (state.year == 2) { $("#barcore").animate( { width: "20px"}, 500); }
   if (state.year == 3) { $("#barcore").animate( { width: "30px"}, 500); }  

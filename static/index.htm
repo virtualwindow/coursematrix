@@ -1,0 +1,893 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+
+    <title>Course Matrix</title>
+
+    
+<link rel="stylesheet" href="css/pure-min.css">
+
+
+
+
+  
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/layouts/side-menu.css">
+    <!--<![endif]-->
+<link rel="stylesheet" href="css/towmatrix.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/towmatrix.js"></script>
+<link rel="stylesheet" href="css/enquiry.css">
+<script>
+    var userdata = {}
+
+function ValidateEnquiry() {
+        var botChecker = false;
+        var validEmail = false;
+        var errorMsg = '';                                             
+        var allValidated = true;
+
+        $('.validate').each(function () {
+            if ($(this).val() == '')
+                allValidated = false;
+        });
+
+        if(allValidated) {
+            userdata.firstname = $('#enquirytitle').val() + ' ' + $('#enquiryname').val();
+            userdata.surname = $('#enquirysurname').val();
+
+            userdata.company = $('#enquirycompany').val();
+            userdata.cell = $('#enquirycellphone').val();
+
+            
+            userdata.email = $('#enquiryemail').val();
+            
+            userdata.qualification = $('#enquiryqualification').val();
+            userdata.altphone = $('#enquiryaltphone').val();
+            userdata.occupation = $('#enquiryoccupation').val();
+            
+            userdata.reference = $('#enquiryreference').val();
+            userdata.contact = $('#enquirycontact').val();
+            userdata.comment = $('#enquirycomment').val();
+
+
+            userdata.comment += " altphone  " + userdata.altphone + " ";
+            userdata.comment += " qualification  " + userdata.qualification + " ";
+            userdata.comment += " occupation  " + userdata.occupation + " ";
+            userdata.comment += " company  " + userdata.company + " ";
+            userdata.comment += " contactperson  " + userdata.contact + " ";
+            userdata.comment += " how did you hear  " + userdata.reference + " ";
+
+            console.log(userdata); 
+
+            return 1; 
+
+        } else {
+            $(".formmessage").html('<span style="color: red;">Complete all fields.</span>');
+            return 0;
+        }
+}
+
+function SkipAndSubmit() {
+    if(ValidateEnquiry())
+    {   
+
+        
+        var querystr = 'http://www.odysseycrm.co.za/OpenWindow/externallead.asmx/SaveExternalLead?sName=' + urlenc(userdata.firstname) + '&sSurname=' + urlenc(userdata.surname) + '&sCompany=' + urlenc(userdata.company) + '&sCellnumber=' + urlenc(userdata.cell) + '&sEmail=' + urlenc(userdata.email) + '&sComment=test&companyId=1&Dynamiccontrolvalue=&callback=?'
+        
+
+
+        console.log(querystr);
+        
+        
+        $.getJSON(querystr, function (myData) {
+            console.log("it worked? i think..")
+            
+        });
+       
+
+        $(".formmessage").html('<span style="color: green;">Thank you.</span>');
+        $("#enquiryform").hide();
+        $("#enquiryformdone").show();
+    }
+}
+
+function urlenc(intext) {
+    var temptext = intext;
+
+    var tempbtext = temptext.split(" ").join("_");
+    //return encodeURIComponent(tempbtext)
+
+    return intext;
+}
+
+function ToCourseMatrix() {
+    
+    
+
+    if(ValidateEnquiry())
+    {   
+        
+
+            
+            /*$.getJSON('http://www.odysseycrm.co.za/OpenWindow/externallead.asmx/SaveExternalLead?sName=' + name + '&sSurname=' + surname + '&sCompany=' + company + '&sCellnumber=' + cell + '&sEmail=' + email + '&sComment=' + comment + '&companyId=' + comp  + '&Dynamiccontrolvalue=' + dynamiccontrolvalue + '&callback=?', function (myData) {
+                console.log("it worked? i think..")
+                console.log(myData);
+                //<string xmlns="http://tempuri.org/">true</string> 
+                // ??? xml response eugh..
+            });    */
+            $(".formmessage").html('<span style="color: green;">Thank you. Taking you to the course matrix.</span>');
+              
+                                                                                                                                         
+            $("#enquiryform").hide();
+            $(".matrixform").show();
+            schoolblock1slides();
+            schoolblock2slides();
+            schoolblock3slides();
+            schoolblock4slides();
+    }
+    
+    
+}
+
+
+function FinishCourseSelection() {
+        $(".matrixform").hide();
+        $("#enquiryformdone").show();
+        userdata.matrix = state
+        console.log(userdata)
+        console.log(state)
+
+}
+
+
+function ValidateEmail(email) {
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;                                   
+    return filter.test(email);              
+}
+</script>
+</head>
+<body>
+
+
+
+
+<div id="layout">
+    <div id="main">
+
+
+
+
+
+
+<div class="pure-g" id="enquiryform" >
+        
+
+        <div class="l-box pure-u-1">
+            <div class="formwrapper" style="margin: 0 auto; padding: 1em;">
+            <h2 class="content-subheadline"><span class="content-subhead">Enquiry form</span></h2>
+            <form class="pure-form pure-form-aligned">
+                <fieldset>
+
+                    <h4>Required Fields</h4>
+                    <div class="pure-control-group">
+                        <label for="name">title</label>
+                            <select id="enquirytitle" class="selectv"  name="enquiry[title]" >
+                                <option value=""></option>
+                                <option value="Prof">Prof.</option>
+                                <option value="Eng">Eng.</option>
+                                <option value="Arch">Arch.</option>
+                                <option value="Mr">Mr.</option>
+                                <option value="Mrs">Mrs.</option>
+                                <option value="Ms">Ms.</option>
+                            </select>
+                    </div>
+
+                    <div class="pure-control-group">
+                        <label for="name">first name</label>
+                        <input id="enquiryname" class="validate" id="name" type="text" placeholder="">
+                    </div>
+
+                    <div class="pure-control-group">
+                        <label for="password">surname</label>
+                        <input class="validate"id="enquirysurname" type="text" placeholder="">
+                    </div>
+
+                    <div class="pure-control-group">
+                        <label for="email">email</label>
+                        <input class="validate" id="enquiryemail" type="email" placeholder="">
+                    </div>
+
+                    <div class="pure-control-group">
+                        <label for="cellphone">cellphone</label>
+                        <input class="validate" id="enquirycellphone" type="text" placeholder="">
+                    </div>
+
+                    <div class="pure-control-group">
+                        <label for="name">highest qualification or grade</label>
+                            <select class="select" id="enquiryqualification" name="enquiry[qualification]">
+                                <option value="Select"></option>
+                                <option value="None">None</option>
+                                <option value="Primary">Primary</option>
+                                <option value="Secondary">Secondary</option>
+                                <option value="High School">High School</option>
+                                <option value="Matric">Matric</option>
+                                <option value="Diploma">Diploma</option>
+                                <option value="Degree">Degree</option>
+                                <option value="Masters">Masters</option>
+                                <option value="Doctorate">Doctorate</option>
+                            </select>
+                    </div>        
+
+                    <h4>Optional Fields</h4>
+                    <div class="pure-control-group">
+                        <label for="altphone">alternative phone</label>
+                        <input id="enquiryaltphone" type="text" placeholder="">
+                    </div>
+
+                    <div class="pure-control-group">
+                        <label for="occupation">occupation</label>
+                        <input id="enquiryoccupation" type="text" placeholder="">
+                    </div>
+
+                    <div class="pure-control-group">
+                        <label for="company">company name</label>
+                        <input id="enquirycompany" type="text" placeholder="">
+                    </div>
+
+                    <div class="pure-control-group">
+                        <label for="name">where did you hear about us?</label>
+                            <select id="enquiryreference" class="select" id="enquiry_reference" name="enquiry[reference]">
+                                <option value="Select"></option>
+                                <option value="Friend">Friend</option>
+                                <option value="Website">Website</option>
+                                <option value="Other">Other</option>
+                            </select>
+                    </div>  
+
+                    <div class="pure-control-group">
+                        <label for="name">who is your owi contact person?</label>
+                            <select id="enquirycontact" class="select" id="enquiry_contact" name="enquiry[contact]">
+                                <option value="Select"></option>
+                                <option value="Wimpie">Wimpie</option>
+                                <option value="Lorinda">Lorinda</option>
+                                <option value="Other">Other</option>
+                            </select>
+                    </div>  
+
+                    <div class="pure-control-group">
+                        <label for="name">comment</label>
+                            <textarea id='enquirycomment' style='height:100px' placeholder='comment'></textarea>
+                    </div>  
+
+                   
+                    <div class="pure-control-group">
+                        <p class="formmessage"></p>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="pure-button pure-button-primary enquirybtns skipbutton" id='btnToCourseMatrix' onclick='SkipAndSubmit(); return false;'> Skip course selection and Submit <i class="fa fa-arrow-circle-right"></i></button>
+
+                        <button type="submit" class="pure-button pure-button-primary enquirybtns" id='btnToCourseMatrix' onclick='ToCourseMatrix(); return false;'>Select Courses <i class="fa fa-arrow-circle-right"></i></button>
+                    </div>
+                </fieldset>
+            </form>
+            </div>
+    </div>
+
+</div>
+        
+
+
+    
+
+<div class="pure-g" id="enquiryformdone"  style="display:none;">
+
+        <div class="l-box pure-u-1">
+            <div class="formwrapper" style="margin: 0 auto; padding: 1em;">
+                
+                <h2 class="content-subheadline"><span class="content-subhead">Thank you</span></h2>
+                <p> Someone will be in contact with you shortly.</p>
+            </div>
+        </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="content matrixform" style="display: none;">
+
+        
+        <h2 class="content-subheadline"><span class="content-subhead">Select your School</span></h2>
+
+        <div class="pure-g-r matrix">
+                <div class="pure-u-1-3">
+                    
+                        <div id="matrixBigDS"><a href="#" class="matrixBig">
+                            <div id="matrixText">
+                                <span class="matrixBigMid">DESIGN</span><br>
+                                <span class="matrixBigBot">STUDIES</span>
+                            </div>                            
+                            </a>              
+                        </div>      
+                    
+                </div>
+                <div class="pure-u-1-3">
+                    
+                        <div id="matrixBigFA"><a href="#" class="matrixBig">
+                            <div id="matrixText">
+                                <span class="matrixBigMid">FILM</span><br>
+                                <span class="matrixBigBot">ARTS</span>
+                            </div>                            
+                        </a></div>      
+                    
+                </div>
+                <div class="pure-u-1-3">
+                    
+                        <div id="matrixBigIA"><a href="#" class="matrixBig">
+                            <div id="matrixText">
+                                <span class="matrixBigMid">INTERACTIVE</span><br>
+                                <span class="matrixBigBot">ARTS</span>
+                            </div>                            
+                         </a></div>         
+                </div>
+<!--//temporarily disabled
+                <div class="pure-u-1-4">
+                   
+                        <div id="matrixBigVA"> <a href="#" class="matrixBig">
+                            <div id="matrixText">
+                                <span class="matrixBigMid">VISUAL</span><br>
+                                <span class="matrixBigBot">ARTS</span>
+                            </div>                            
+                           </a></div>      
+                 
+                </div>
+!-->
+            </div>
+
+
+
+
+
+
+<div class="pure-g-r schoolbigblocks">
+    <div class="pure-u-1-3">
+        <div class="schoolblocksleft schoolblocks" id="schoolblock1">
+            <div id="schoolblock1text" style="position:absolute;">
+                <p>The pursuit of a career in Design Studies provides the kind of thinking associated with the next generation as we investigate the fields of Communication Design, Photography and Illustration.</p>
+            </div>
+            <div id="schoolblock1demo0" class="schoolblock1demo"></div>
+            <div id="schoolblock1demo1" class="schoolblock1demo" style="display:none"></div>
+        </div>
+    </div>
+
+    <div class="pure-u-1-3">
+        <div class="schoolblocksmid schoolblocks" id="schoolblock2">
+            <div id="schoolblock2text" style="position:absolute;">
+                <p>In Film Arts we explore possibilities of expression through the media of Film & Television, 3D Animation, Motion Design, Sound and Game Design, Screenwriting, Screen Acting and Production Design.</p>
+            </div>
+            <div id="schoolblock2demo0" class="schoolblock2demo"></div>
+            <div id="schoolblock2demo1" class="schoolblock2demo" style="display:none"></div>
+        </div>
+    </div>
+
+    <div class="pure-u-1-3">
+        <div class="schoolblocksmid schoolblocks" id="schoolblock3">
+            <div id="schoolblock3text" style="position:absolute;">
+                <p>The areas investigated are Interactive Media Design, Multimedia Programming and Three Dimensional Design.</p>
+            </div>
+            <div id="schoolblock3demo0" class="schoolblock3demo"></div>
+            <div id="schoolblock3demo1" class="schoolblock3demo" style="display:none"></div>
+        </div>
+    </div>
+<!--//temporarily disabled
+    <div class="pure-u-1-3">
+        <div class="schoolblocksright schoolblocks" id="schoolblock4">
+            <div id="schoolblock4text" style="position:absolute;">
+                <p>COMING SOON<br></br>In the Visual Arts degree, we offer professional education and training in Professional Art Practice in a choice of Painting, Drawing, Printmaking, Sculpture or New Media, as well as in Curatorial Practice and Art Therapy.</p>
+            </div>
+            <div id="schoolblock4demo0" class="schoolblock4demo"></div>
+            <div id="schoolblock4demo1" class="schoolblock4demo" style="display:none"></div>
+        </div>
+    </div>
+!-->
+</div>
+
+
+
+
+<h2 class="content-subheadline fieldheading"><span class="content-subhead">Select your Field</span></h2>
+
+<div class="pure-g-r fieldsmenu">
+    <div class="pure-u-1-5" >
+        <div class="fields left" id="field0">
+           
+                <div class="fieldsText">
+                    <span  class="fieldText" id="field0text">Communication Design</span>
+                </div>  
+
+        </div>
+    </div>
+
+    <div class="pure-u-1-5" >
+        <div class="fields mid" id="field1">
+            <div>
+                <span class="fieldText" id="field1text">Photography</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="pure-u-1-5" >
+        <div class="fields mid" id="field2">
+            <div>
+                <span class="fieldText" id="field2text">Photography</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="pure-u-1-5">
+        <div class="fields mid" id="field3">
+            <div>
+                <span class="fieldText" id="field3text">Photography</span>
+            </div>
+        </div>
+    </div>    
+
+    <div class="pure-u-1-5">
+        <div class="fields right" id="field4">
+            <div>
+                <span class="fieldText" id="field4text">Illustration</span>
+            </div>
+        </div>
+    </div>    
+   
+</div>
+
+<div class="pure-g-r fieldsmenu" style="margin-top:8px;">
+    <div class="pure-u-1-5">
+        <div class="fields left" id="field5">
+            <div>
+                <span class="fieldText" id="field5text"></span>
+            </div>
+        </div>
+    </div>       
+
+    <div class="pure-u-1-5">
+        <div class="fields mid" id="field6">
+            <div>
+                <span class="fieldText" id="field6text"></span>
+            </div>
+        </div>
+    </div>   
+
+    <div class="pure-u-1-5">
+        <div class="fields mid" id="field7">
+            <div>
+                <span class="fieldText" id="field7text"></span>
+            </div>
+        </div>
+    </div>   
+
+    <div class="pure-u-1-5">
+        <div class="fields mid" id="field8">
+            <div>
+                <span class="fieldText" id="field8text"></span>
+            </div>
+        </div>
+    </div>   
+
+    <div class="pure-u-1-5">
+        <div class="fields right" id="field9">
+            <div>
+                <span class="fieldText" id="field9text"></span>
+            </div>
+        </div>
+    </div>                   
+</div>
+
+<h2 class="content-subheadline outcomesheading"><span class="content-subhead">Select your Outcome</span></h2>        
+
+
+<div class="pure-g-r outcomesmenu" >    
+
+    <div class="pure-u-1-5">
+        <div id="outcomes0" class="outcomesWrap left">
+        <div class="outcomesText">
+        <span class="outcomesBIG" style="margin-top:20px;">CAREERS</span><br></div></div>    
+    </div>
+
+    <div class="pure-u-1-5">
+        <div id="outcomes1" class="outcomesWrap mid">
+        <div class="outcomesText">
+        <span class="outcomesBIG">SHORT</span><br>
+        <span class="outcomesSMALL">Courses</span></div></div>                    
+    </div>
+
+    <div class="pure-u-1-5">
+        <div id="outcomes2" class="outcomesWrap mid">
+        <div class="outcomesText">
+        <span class="outcomesBIG">SHORT</span><br>
+        <span class="outcomesSMALL">Learning Programmes</span></div></div>                    
+    </div>                
+
+    <div class="pure-u-1-5">
+        <div id="outcomes3" class="outcomesWrap mid">
+        <div class="outcomesText">
+        <span class="outcomesBIG">PROFESSIONAL</span><br>
+        <span class="outcomesSMALL">Skills Courses</span></div></div>                    
+    </div>   
+
+    <div class="pure-u-1-5">
+        <div id="outcomes4" class="outcomesWrap right">                                          
+        <div class="outcomesText">
+        <span class="outcomesBIG">ONE YEAR</span><br>
+        <span class="outcomesSMALL">Programmes</span></div></div>
+    </div>   
+</div>                
+
+
+
+
+<div class="pure-g-r outcomesmenu2" style="margin-top: 8px;">    
+
+    <div class="pure-u-1-5">
+        <div id="outcomes5" class="outcomesWrap left">
+        <div class="outcomesText">
+        <span class="outcomesBIG">BA HONOURS</span><br>
+        <span class="outcomesSMALL">Visual Communication</span></div></div>                    
+    </div>
+
+    <div class="pure-u-1-5">
+        <div id="outcomes6" class="outcomesWrap mid">
+        <div class="outcomesText">
+        <span class="outcomesBIG">BA DEGREE</span><br>
+        <span class="outcomesSMALL">Visual Communication</span></div></div>                    
+    </div>
+
+    <div class="pure-u-1-5">
+        <div id="outcomes7" class="degreeWrap mid">
+        <div class="degreeText">
+        <span class="degreeBIG">1</span>
+        <span class="degreeMED">FOUNDATION</span>
+        <span class="degreeSMALL">YEAR</span></div></div>                    
+    </div>                
+
+    <div class="pure-u-1-5">
+        <div id="outcomes8" class="degreeWrap mid ">
+        <div class="degreeText">
+        <span class="degreeBIG">2</span>
+        <span class="degreeMED">SECOND</span>
+        <span class="degreeSMALL">YEAR</span></div></div>                    
+    </div>  
+
+    <div class="pure-u-1-5">
+        <div id="outcomes9" class="degreeWrap right ">
+        <div class="degreeText">
+        <span class="degreeBIG">3</span>
+        <span class="degreeMED">THIRD</span>
+        <span class="degreeSMALL">YEAR</span></div></div>                    
+    </div>  
+
+</div>       
+
+<h2 class="content-subheadline" id="outcome-1heading"><span class="content-subhead">Course Structure</span></h2>     
+<h2 class="content-subheadline" id="outcome0heading"><span class="content-subhead">Careers</span></h2>     
+<h2 class="content-subheadline" id="outcome1heading"><span class="content-subhead">Short Courses</span></h2> 
+<h2 class="content-subheadline" id="outcome2heading"><span class="content-subhead">Short Learning Programmes</span></h2> 
+<h2 class="content-subheadline" id="outcome3heading"><span class="content-subhead">Professional Skills Courses</span></h2> 
+<h2 class="content-subheadline" id="outcome4heading"><span class="content-subhead">One Year Programmes</span></h2> 
+<h2 class="content-subheadline" id="outcome5heading"><span class="content-subhead">BA Honours Visual Communication</span></h2> 
+<h2 class="content-subheadline" id="outcome6heading"><span class="content-subhead">BA Degree Visual Communication</span></h2> 
+<h2 class="content-subheadline" id="outcome7heading"><span class="content-subhead">BA Degree Visual Communication Foundation Year</span></h2> 
+<h2 class="content-subheadline" id="outcome8heading"><span class="content-subhead">BA Degree Visual Communication Second Year</span></h2> 
+<h2 class="content-subheadline" id="outcome9heading"><span class="content-subhead">BA Degree Visual Communication Third Year</span></h2> 
+
+<div class="pure-g-r coursemenu" style="margin-top: 8px;">    
+                <div class="pure-u-1-5">
+                    <div class="structureWrap left">                           
+                                <div class="structureText">
+                                    <span class="structureBIG">DESIGN</span>
+                                    <span class="structureSMALL">STUDIES</span>
+                                </div>  
+                    </div>                    
+                </div>
+
+                <div class="pure-u-4-5">
+                    <div class="structureContent">                         
+                        <h3 id="structureFieldTitle"><span id="structureFieldTitleArrow">&gt;</span> <span id="structureFieldText">Photography</span></h3>
+
+                        <p id="structureTextBlockTop">
+                        </p>
+
+                        <ul id="accordion">
+                            <li>
+                                <div id="subjectbar"><div class="subjectadderbutton">+</div><div id="subjectname">Photography 101</div>
+                                <p id="subjectTextBlock">This introduces the student to the terminologies and functionality of the 35mm digital single-lens reflex camera from basic to advanced camera settings, and will focus on ascpects such as exposure control, the practical control of contrast and tone, as well as the fundamental principles of light and colour.</p>
+                            </li>
+                        </ul>
+                        
+
+                    </div>                    
+                </div>
+            
+</div>
+
+
+
+
+                    
+<div class="pure-g-r" id="outcome0block"><div class="pure-u-1-5"></div>
+    <div class="pure-u-4-5">    
+    <div id="carreersholder" class="pure-g-r" style="margin-left:30px;">
+            <div class="pure-u-1-3">
+                <div class="careerwrapper" >
+                        <i class="fa fa-plus"></i>
+
+                        <div class="career">
+                        <span>Compositor:</span> Edits and composites multi-layered audio-visual content for digitally enhanced film and television productions. 
+                        </div>
+
+                </div>
+            </div>
+
+            <div class="pure-u-1-3 ">
+                <div class="careerwrapper">
+                        <i class="fa fa-plus"></i>
+
+                        <div class="career">
+                        <span>Sound Designer for Film &amp; Television:</span> Designs and assembles all the audio components of an audio-visual project from music to voice-overs and completes the final mix.
+                        </div>
+                        
+                </div>
+            </div>
+
+            <div class="pure-u-1-3 ">
+                <div class="careerwrapper">
+                        <i class="fa fa-plus"></i>
+
+                        <div class="career">
+                       <span>Corporate Filmmaker:</span> Conceptualises and realises audio-visual content relevant to the needs of corporate businesses.
+                        </div>
+                        
+                </div>
+            </div>
+
+            <div class="pure-u-1-3 ">
+                <div class="careerwrapper">
+                        <i class="fa fa-plus"></i>
+
+                        <div class="career">
+                       <span>Film/TV Editor:</span> Edits and supervises post-production audio-visual content for film and television.
+                        </div>
+                        
+                </div>
+            </div>
+
+            <div class="pure-u-1-3 ">
+                <div class="careerwrapper">
+                        <i class="fa fa-plus"></i>
+
+                        <div class="career">
+                        <span>Layout Artist:</span> Takes direction from storyboard artists and directors to create virtual environments while both 2D and 3D skills. Layout artists will often work within a team of 3D artists on large productions.
+                        </div>
+                        
+                </div>
+            </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="pure-g-r" id="courselayoutmenu" >   
+     <div class="pure-u-1-3" style="margin-top: 45px;">
+        <div id="courselayoutleftwrap">
+            <div id="courselayoutleftcontent">
+                <span id="courselayoutleftcontentyear">1</span>
+                <span id="courselayoutleftcontenttitle">Foundation Year</span>
+
+                <div id="courselayoutleftcredits">120 Credits</div>
+
+                <div id="courselayoutleftcreditsbar">
+                    <div id="barcore"></div>
+                    <div id="bar0"></div>
+                    <div id="bar1"></div>
+                    <div id="bar2"></div>
+                </div>
+
+            </div>
+        </div>
+     </div>
+
+     <div id="coresubjectsblock" class="pure-u-1-3">
+         <div id="coresubjectswrapper">
+            <h3 id="layoutsubjectsheading">Core Subjects</h3>
+
+            <div class="pure-g-r coresubjectsholder">
+                <div id="coresubjectsblock0" class="pure-u-1-2">
+                    <div class="courselayoutsubjectwrap left coreleft" >
+                        <h3 class="courselayoutsubjecttitle">Visual Culture</h3>
+                        <h4 class="courselayoutsubjectcredits">20 credits</h4>
+                    </div>
+                </div>
+                <div id="coresubjectsblock1" class="pure-u-1-2">
+                    <div class="courselayoutsubjectwrap right" >
+                        <h3 class="courselayoutsubjecttitle">Drawing</h3>
+                        <h4 class="courselayoutsubjectcredits">20 credits</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pure-g-r" style="margin-top: 8px;">
+                <div id="coresubjectsblock2" class="pure-u-1-2">
+                    <div class="courselayoutsubjectwrap left coreleft" >
+                        <h3 class="courselayoutsubjecttitle">Academic Skills</h3>
+                        <h4 class="courselayoutsubjectcredits">10 credits</h4>
+                    </div>
+                </div>
+                <div id="coresubjectsblock3" class="pure-u-1-2">
+                    <div class="courselayoutsubjectwrap right" >
+                        <h3 class="courselayoutsubjecttitle">Art History</h3>
+                        <h4 class="courselayoutsubjectcredits">10 credits</h4>
+                    </div>
+                </div>
+            </div>
+
+
+         </div>
+     </div>
+
+     <div id="majorsubjectsblock" class="pure-u-1-3">
+        <div id="majorsubjectswrapper">
+            <h3 id="layoutsubjectsheading">Major Subjects</h3>
+            <div class="pure-g-r">
+                <div class="pure-u-1-2 majorsubjectsblocks">
+                    <div id="subjectblock0" class="courselayoutsubjectwrap left"  style="background: #fbb427">
+                        <h3 id="subjectblock0name" class="courselayoutsubjecttitle" >Photography</h3>
+                        <h4 id="subjectblock0credits" class="courselayoutsubjectcredits">20 credits</h4>
+                        <span id="subjectblock0add" class="courselayoutaddsubjectspan">+ Add subject</span>
+                    </div>
+                </div>
+                <div class="pure-u-1-2 majorsubjectsblocks">
+                    <div id="subjectblock1" class="courselayoutsubjectwrap right courselayoutaddsubject" >
+                        <h3 id="subjectblock1name" class="courselayoutsubjecttitle" >Photography</h3>
+                        <h4 id="subjectblock1credits" class="courselayoutsubjectcredits">20 credits</h4>                    
+                        <span id="subjectblock1add" class="courselayoutaddsubjectspan">+ Add subject</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pure-g-r" style="margin-top: 8px;">
+                <div class="pure-u-1-2 majorsubjectsblocks">
+                    <div id="subjectblock2" class="courselayoutsubjectwrap left courselayoutaddsubject" >
+                        <h3 id="subjectblock2name" class="courselayoutsubjecttitle" >Photography</h3>
+                        <h4 id="subjectblock2credits" class="courselayoutsubjectcredits">20 credits</h4>                    
+                        <span id="subjectblock2add" class="courselayoutaddsubjectspan">+ Add subject</span>
+                    </div>
+                </div>
+            </div>
+
+
+         </div>
+     </div>     
+
+
+     <div id="compulsorysubjectsblock" class="pure-u-1-3">
+        <div id="compulsorysubjectswrapper">
+            <h3 id="layoutsubjectsheading">Compulsory Electives</h3>
+            
+            <div class="pure-g-r">
+                
+                <div class="pure-u-1-1 compulsorysubjectsblocks">
+                    <div id="compulsoryblock0" class="courselayoutcompulsorywrap">
+                        Complete HD
+                    </div>
+                </div>
+
+                 <div class="pure-u-1-1 compulsorysubjectsblocks">
+                    <div id="compulsoryblock1" class="courselayoutcompulsorywrap">
+                       Genre Film &amp; Lighting
+                    </div>
+                </div>
+
+               <div class="pure-u-1-1 compulsorysubjectsblocks">
+                    <div id="compulsoryblock2" class="courselayoutcompulsorywrap">
+                        Directing Actors for Screen
+                    </div>
+                </div>
+
+                <div class="pure-u-1-1 compulsorysubjectsblocks">
+                    <div id="compulsoryblock3" class="courselayoutcompulsorywrap">
+                        Film Pro Toolkit
+                    </div>
+                </div>
+            </div>
+
+            <div class="pure-g-r" style="margin-top: 6px;">
+                
+                <div class="pure-u-1-1 compulsorysubjectsblocks">
+                    <div id="compulsoryblock4" class="courselayoutcompulsorywrap">
+                        Complete HD
+                    </div>
+                </div>
+
+                 <div class="pure-u-1-1 compulsorysubjectsblocks">
+                    <div id="compulsoryblock5" class="courselayoutcompulsorywrap">
+                       Genre Film &amp; Lighting
+                    </div>
+                </div>
+
+               <div class="pure-u-1-1 compulsorysubjectsblocks">
+                    <div id="compulsoryblock6" class="courselayoutcompulsorywrap">
+                        Directing Actors for Screen
+                    </div>
+                </div>
+
+                <div class="pure-u-1-1 compulsorysubjectsblocks">
+                    <div id="compulsoryblock7" class="courselayoutcompulsorywrap">
+                        Film Pro Toolkit
+                    </div>
+                </div>
+            </div>
+
+         </div>
+     </div>  
+</div>
+
+     <div class="pure-g-r" id="choiceelectivemenu">
+        <div class="pure-u-1-3">&nbsp;</div>
+
+        <div class="pure-u-2-3">
+         <div class="pure-g-r" id="courselayoutmenu" >   
+             <div class="pure-u-1-1">
+                <h3 id="layoutsubjectsheading">Choice Electives</h3>
+                <div id="choiceelectiveswrap">
+                  
+                    <span>Story Boarding</span> <span>VO techniques for film</span> <span>Visual Effects in AE</span> <span>Symbology in design for film</span> <span>Commercial and corporate acting</span> <span>Development of feature film</span> <span>Game Prototype</span> <span>Psychology of colour in film</span> <span>Game Art and interactive</span> <span>Game Enhancement</span>
+                  
+                </div>
+            </div>
+         </div>
+        </div>
+    </div>
+
+
+                    <div class="pure-g-r" style="margin-top: 25px;">
+                        <div class="pure-u-1-1">&nbsp;
+                            <p style="text-align:right;">When you've made your selections please continue</p>
+                            <button type="submit" class="pure-button pure-button-primary enquirybtns" id='btnToCourseMatrix' onclick='FinishCourseSelection(); return false;'>Submit <i class="fa fa-arrow-circle-right"></i></button>
+                        </div>
+                        
+
+                        
+                    </div>
+
+</div>
+
+
+<script src="js/ui.js"></script>
+    
+</body>
+</html>

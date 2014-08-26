@@ -1,0 +1,131 @@
+<html>
+<head runat='server'>
+    <title>External Lead</title>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+    <script type='text/javascript'>
+
+
+function SendLead() {
+    var botChecker = false;
+    var validEmail = false;
+    var errorMsg = '';                                             
+    var allValidated = true;
+
+    $('.validate').each(function () {
+        if ($(this).val() == '')
+            allValidated = false;
+        });
+
+    if(allValidated)
+    {
+        //check anit-bot
+        if($('#txtBotChecker').val() != '')
+        {
+            if($('#txtBotChecker').val() == '4') {
+            botChecker = true;
+            } else {
+            errorMsg = 'Error with verification';   }                                                                                                                     
+        }                                                                                             
+
+        if(botChecker)
+        {
+            var value = $('#txtEmail').val();                                  
+            if(!ValidateEmail(value)) {
+                errorMsg = 'Error with email validation';                                               
+                alert(errorMsg);
+            } else {
+                var name = $('#txtName').val();
+                var surname = $('#txtSurname').val();
+                var company = $('#txtCompany').val();
+                var cell = $('#txtCell').val();
+                var email = $('#txtEmail').val();
+                var comment = $('#txtComment').val();
+                var empEmail = $('#txtEmpEmail').val();
+                var comp = $('#ddlClosestCompany').val();
+
+
+                var dynamiccontrolvalue = '';
+
+
+                $('#txtName').val('');
+                $('#txtSurname').val('');
+                $('#txtCompany').val('');
+                $('#txtCell').val('');
+                $('#txtEmail').val('');
+                $('#txtComment').val('');
+                $('#txtEmpEmail').val('');
+                $('#txtBotChecker').val('')
+
+                console.log('http://www.odysseycrm.co.za/OpenWindow/externallead.asmx/SaveExternalLead?sName=' + name + '&sSurname=' + surname + '&sCompany=' + company + '&sCellnumber=' + cell + '&sEmail=' + email + '&sComment=' + comment + '&companyId=' + comp  + '&Dynamiccontrolvalue=' + dynamiccontrolvalue + '&callback=?')
+                
+                $.getJSON('http://www.odysseycrm.co.za/OpenWindow/externallead.asmx/SaveExternalLead?sName=' + name + '&sSurname=' + surname + '&sCompany=' + company + '&sCellnumber=' + cell + '&sEmail=' + email + '&sComment=' + comment + '&companyId=' + comp  + '&Dynamiccontrolvalue=' + dynamiccontrolvalue + '&callback=?', function (myData) {
+                    console.log("it worked? i think..")
+                    console.log(myData);
+                });    
+
+                alert('Lead created.');                                                                                                                                                                                          
+            }
+
+        } else alert(errorMsg);    
+    
+    } else alert('Complete all fields.');
+    
+    
+}
+
+function ValidateEmail(email) {
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;                                   
+    return filter.test(email);              
+}
+
+
+    </script>
+</head>
+<body>
+    <form id='form1' runat='server'>
+    <div>
+        <table width='720px' cellpadding='0' cellspacing='0'>
+            <tr>
+                <td>Name</td>
+                <td><input id='txtName' type='text' placeholder='name' class='validate' /></td>
+            </tr>
+            <tr>
+                <td>Surname</td>
+                <td><input id='txtSurname' type='text' placeholder='surname' class='validate' /></td>
+            </tr>
+            <tr>
+                <td>Company</td>
+                <td><input id='txtCompany' type='text' placeholder='company' class='validate' /></td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td><input id='txtCell' type='text' placeholder='cell' class='validate' /></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input id='txtEmail' type='email' placeholder='email' class='validate' /></td>
+            </tr>
+            <tr>
+                <td>Closest Office</td>
+                <td><select id='ddlClosestCompany'><option value='1'>Open Window</option></select></td>
+            </tr>
+            <tr>
+                <td>Give the result of 2 + 2:</td>
+                <td><input id='txtBotChecker' type='text' placeholder='4' class='botchecker' /></td>
+            </tr>
+            <tr>
+                <td colspan='2'>Comment</td>
+            </tr>
+            <tr>
+                <td colspan='2'>
+                    <textarea id='txtComment' style='width:100%; height:100px' placeholder='comment' class='validate'></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan='2'><button id='btnSendLead' onclick='SendLead(); return false;'>Submit</button></td>
+            </tr>
+        </table>    
+    </div>
+    </form>
+</body>
+</html> 
